@@ -1,0 +1,155 @@
+
+
+
+$w-xlg: 1440px; // 1440px and up
+$w-lg: 1134px; // 1134px
+$w-med: 816px; // 816px
+$w-sm: 320px; // 320px
+
+
+  // $width-xxxlg: 130em; //
+  // $width-xxlg: 110em; 
+
+
+  @mixin breakpoint($point) {
+    @if $point == w-xsm {
+      //don't do anything, we don't need this size
+    } 
+    @else if $point == w-sm {
+      @media (max-width: #{$w-med}) {
+        @content;
+      }
+    } 
+    @else if $point == w-med {
+      @media (max-width: #{$w-lg}) { 
+        @content;
+       }
+    }     @else if $point == w-lg {
+      @media (max-width: #{$w-xlg}) { 
+        @content;
+       }
+    } @else if $point == w-xlg {
+      @media (min-width: calc(#{$w-xlg} + 1px)) { 
+        @content;
+      }
+    } @else {
+      @warn "Breakpoint mixin supports: w-sm, w-med, w-lg, w-xlg";
+    }
+  }
+
+  //page-container widths
+
+  @mixin page-width {
+    width: var(--xlg-page-width);
+
+    @include breakpoint(w-lg) {
+      width: var(--lg-page-width);
+    }
+
+    @include breakpoint(w-med) {
+      width: var(--med-page-width);
+    }
+
+    @include breakpoint(w-sm) {
+      width: 100%;
+      max-width: 40rem;
+    }
+
+
+  }
+
+  .page-width {
+    @include page-width;
+
+    @include breakpoint(w-sm) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  @mixin column-gap-12 {
+    & {
+      column-gap: 2rem;
+    }
+    @include breakpoint(w-sm) {
+      column-gap: 0rem;
+    }
+  }
+
+  @mixin column-gap-6 {
+    & {
+      column-gap: 8rem;
+    }
+
+    @include breakpoint(w-med) {
+      column-gap: 4rem;
+    }
+
+    @include breakpoint(w-sm) {
+      column-gap: 0rem;
+    }
+  }
+
+  %grid-12 {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    align-self: center;
+    @include page-width;
+    @include column-gap-12;
+  }
+
+  %grid-6 {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    align-self: center;
+    @include page-width;
+    @include column-gap-6;
+  }
+
+
+
+  @mixin small-pad() {
+    @include breakpoint(w-sm) {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  %grid-section {
+    display: grid;
+    grid-template-columns: 1fr var(--center-width) 1fr;
+    --center-width: var(--xlg-page-width);
+    @include breakpoint(w-lg) {
+      --center-width: var(--lg-page-width);
+    }
+
+    @include breakpoint(w-med) {
+      --center-width: var(--med-page-width);
+    }
+
+    @include breakpoint(w-sm) {
+      --center-width: calc(100% - 2rem);
+    }
+  }
+
+  .mainBody {
+    justify-content: center;
+  }
+
+  .gridWrapper {
+    @extend %grid-12;
+  }
+  .caseSection {
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+    @include breakpoint(w-sm) {
+      padding-top: 0rem;
+    }
+  }
+
+  .rowToColumn {
+    flex-direction: row;
+    @include breakpoint(w-med) {
+      flex-direction: column;
+    }
+  }

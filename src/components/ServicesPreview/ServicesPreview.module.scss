@@ -1,0 +1,141 @@
+.servicesSection {
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #e5e7eb, transparent);
+  }
+}
+
+.sectionTitle {
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(45deg, #4f46e5, #7c3aed);
+    border-radius: 2px;
+  }
+}
+
+.servicesGrid {
+  animation: fadeInUp 0.8s ease-out;
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.serviceCard {
+  position: relative;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 0.5rem;
+    z-index: -1;
+    transition: all 0.3s ease;
+  }
+  
+  &:hover {
+    transform: translateY(-5px);
+    border-color: #e0e7ff;
+    
+    &::before {
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%);
+      box-shadow: 0 10px 25px rgba(79, 70, 229, 0.1);
+    }
+  }
+}
+
+.iconContainer {
+  position: relative;
+  transition: all 0.3s ease;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #4f46e5, #7c3aed);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  svg {
+    transition: all 0.3s ease;
+  }
+}
+
+.serviceCard:hover .iconContainer {
+  &::before {
+    opacity: 1;
+  }
+  
+  svg {
+    transform: scale(1.1);
+    color: white;
+  }
+}
+
+.serviceTitle {
+  transition: color 0.3s ease;
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(45deg, #4f46e5, #7c3aed);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+}
+
+.serviceCard:hover .serviceTitle {
+  color: #4f46e5;
+  
+  &::after {
+    width: 100%;
+  }
+}
+
+.serviceDescription {
+  transition: color 0.3s ease;
+  line-height: 1.6;
+}
+
+.serviceCard:hover .serviceDescription {
+  color: #4b5563;
+} 

@@ -1,0 +1,156 @@
+@use "_response_mixins" as *;
+
+
+
+
+body {
+  font-family: var(--font-dm-sans);
+}
+
+a, button, [role="button"], .interactive {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  cursor: pointer !important;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-label);
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    height 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+  }
+
+  &:hover {
+    &::after {
+      height: 6px;
+      z-index: -1;
+      background-color: var(--color-brand);
+      bottom: 1px;
+    }
+  }
+
+  &:active {
+    color: var(--color-brand);
+
+    &::after {
+      transform: none;
+    }
+  }
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+
+b {
+  font-weight: 600;
+}
+
+.label_text {
+  color: var(--color-label);
+}
+
+.display1{
+  font-size: 6.5rem;
+  font-weight: 200;
+  line-height: 1.25;
+
+  @include breakpoint(w-lg) {
+    font-size: 5rem;
+  }
+
+  @include breakpoint(w-med) {
+    font-size: calc(3rem + 1.75vw);
+  }
+}
+
+.display2{
+  font-size: 5rem;
+  font-weight: 200;
+  line-height: 1.75;
+
+  @include breakpoint(w-lg) {
+    font-size: 6.5rem;
+  }
+
+  @include breakpoint(w-med) {
+    font-size: calc(3rem + 1.75vw);
+  }
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 200;
+  line-height: 1.25;
+
+  @include breakpoint(w-lg) {
+    font-size: 3rem;
+  }
+
+  @include breakpoint(w-med) {
+    font-size: calc(1.25rem + 1.75vw);
+  }
+}
+
+h2 {
+  //big titles
+  font-size: 2rem;
+  font-weight: 200;
+  line-height: 1.25;
+
+  @include breakpoint(w-med) {
+    font-size: calc(0.8rem + 2vw);
+  }
+}
+
+h3 {
+  font-family: var(--font-dm-sans);
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--color-brand);
+  text-transform: uppercase;
+
+  @include breakpoint(w-sm) {
+    font-size: 1rem;
+  }
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 200;
+  line-height: 1.75rem;
+
+  @include breakpoint(w-med) {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--color-brand);
+  text-transform: uppercase;
+
+  @include breakpoint(w-med) {
+    font-size: 1rem;
+  }
+}
+
+h6 {
+  //used for menus
+  font-size: 0.875rem;
+  font-weight: 200;
+  line-height: 1.25rem;
+}

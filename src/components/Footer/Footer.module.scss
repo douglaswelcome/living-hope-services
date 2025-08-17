@@ -1,0 +1,141 @@
+.footer {
+  position: relative;
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #374151, transparent);
+  }
+}
+
+.footerContent {
+  animation: fadeInUp 0.8s ease-out;
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.footerSection {
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.footerTitle {
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(45deg, #4f46e5, #7c3aed);
+    border-radius: 1px;
+  }
+}
+
+.footerDescription {
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.footerSection:hover .footerDescription {
+  color: #d1d5db;
+}
+
+.footerSubtitle {
+  position: relative;
+  transition: color 0.3s ease;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(45deg, #4f46e5, #7c3aed);
+    transition: width 0.3s ease;
+    border-radius: 1px;
+  }
+}
+
+.footerSection:hover .footerSubtitle {
+  color: #4f46e5;
+  
+  &::after {
+    width: 30px;
+  }
+}
+
+.footerList {
+  li {
+    position: relative;
+    padding-left: 0;
+    transition: all 0.3s ease;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      left: -8px;
+      top: 50%;
+      width: 4px;
+      height: 4px;
+      background: #6b7280;
+      border-radius: 50%;
+      transform: translateY(-50%);
+      transition: all 0.3s ease;
+    }
+    
+    &:hover {
+      color: #d1d5db;
+      padding-left: 8px;
+      
+      &::before {
+        background: #4f46e5;
+        width: 6px;
+        height: 6px;
+      }
+    }
+  }
+}
+
+.footerBottom {
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #374151, transparent);
+  }
+  
+  p {
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: #d1d5db;
+    }
+  }
+} 
