@@ -55,13 +55,15 @@ src/
 │   └── foundations/    # SCSS variables, mixins, and utilities
 ```
 
-## Component Documentation
+## 📚 Documentation
 
-See [COMPONENTS.md](./COMPONENTS.md) for detailed component documentation and usage examples.
+All project documentation is located in the [`documentation/`](./documentation/) folder:
 
-## SCSS Foundations
-
-See [SCSS_CLEANUP.md](./SCSS_CLEANUP.md) for information about the SCSS foundation system.
+- **[Components Guide](./documentation/COMPONENTS.md)** - Detailed component documentation and usage examples
+- **[SCSS Foundations](./documentation/SCSS_CLEANUP.md)** - Information about the SCSS foundation system
+- **[Project Review](./documentation/PROJECT_REVIEW.md)** - Comprehensive project review and status
+- **[Tailwind v4 Setup](./documentation/TAILWIND_V4_SETUP.md)** - Tailwind CSS v4 configuration guide
+- **[GitHub Setup](./documentation/GITHUB_SETUP.md)** - Repository setup and deployment guide
 
 ## Deployment
 
