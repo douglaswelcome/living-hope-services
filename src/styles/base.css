@@ -3,15 +3,30 @@
 :root {
   --font-dm-sans: "DM Sans", "DM Sans Fallback", Arial, sans-serif;
 
+  /* Brand Colors from SVG */
   --color-white: #ffffff;
   --color-black: #000000;
   --color-black-rgb: 0, 0, 0;
-  --color-brand: #4a5eff;
-  --color-hairline: #555555;
-  --color-label: #bbbbbb;
-  --color-bg1: #161616;
-  --color-bg2: #262626;
-  --color-text: #ffffff;
+  
+  /* Primary Brand Colors */
+  --color-dark-green: #093324;
+  --color-bright-green: #4CC494;
+  --color-teal: #60B8BD;
+  --color-orange: #F29269;
+  --color-yellow: #FAF083;
+  
+  /* Secondary Colors */
+  --color-light-teal: #E0F2F2;
+  --color-pale-blue: #CCE7EA;
+  --color-dark-gray: #292929;
+  
+  /* Legacy variables */
+  --color-brand: var(--color-bright-green);
+  --color-hairline: var(--color-dark-gray);
+  --color-label: var(--color-dark-gray);
+  --color-bg1: var(--color-dark-green);
+  --color-bg2: var(--color-dark-gray);
+  --color-text: var(--color-white);
 
   --background: var(--color-bg1);
   --foreground: var(--color-white);
