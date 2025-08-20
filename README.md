@@ -61,6 +61,7 @@ All project documentation is located in the [`documentation/`](./documentation/)
 
 - **[Components Guide](./documentation/COMPONENTS.md)** - Detailed component documentation and usage examples
 - **[SCSS Foundations](./documentation/SCSS_CLEANUP.md)** - Information about the SCSS foundation system
+- **[Color Scheme](./documentation/COLOR_SCHEME.md)** - Brand colors and design guidelines
 - **[Project Review](./documentation/PROJECT_REVIEW.md)** - Comprehensive project review and status
 - **[Tailwind v4 Setup](./documentation/TAILWIND_V4_SETUP.md)** - Tailwind CSS v4 configuration guide
 - **[GitHub Setup](./documentation/GITHUB_SETUP.md)** - Repository setup and deployment guide
