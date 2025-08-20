@@ -104,8 +104,8 @@ border: 2px solid var(--color-teal);
 
 ## 🎯 **Implementation**
 
-### **CSS Variables**
-All colors are available as CSS custom properties in `:root`:
+### **CSS Variables (Single Source of Truth)**
+All hex values are defined as CSS custom properties in `src/styles/base.css`:
 ```css
 :root {
   --color-dark-green: #093324;
@@ -120,16 +120,16 @@ All colors are available as CSS custom properties in `:root`:
 ```
 
 ### **SCSS Variables**
-For use in SCSS files:
+SCSS variables in `src/styles/foundations/_colors.scss` reference the CSS custom properties:
 ```scss
-$color-dark-green: #093324;
-$color-bright-green: #4CC494;
-$color-teal: #60B8BD;
-$color-orange: #F29269;
-$color-yellow: #FAF083;
-$color-light-teal: #E0F2F2;
-$color-pale-blue: #CCE7EA;
-$color-dark-gray: #292929;
+$color-dark-green: var(--color-dark-green);
+$color-bright-green: var(--color-bright-green);
+$color-teal: var(--color-teal);
+$color-orange: var(--color-orange);
+$color-yellow: var(--color-yellow);
+$color-light-teal: var(--color-light-teal);
+$color-pale-blue: var(--color-pale-blue);
+$color-dark-gray: var(--color-dark-gray);
 ```
 
 ## 🔄 **Legacy Compatibility**
