@@ -7,55 +7,31 @@
           color.channel($hex, "blue", $space: rgb);
 }
 
-// Brand Colors from SVG
-$color-white: #ffffff;
-$color-black: #000000;
-$color-black-rgb: #{hexToRGB(#000000)};
+// SCSS Variables that reference CSS Custom Properties
+// These allow SCSS to use the colors defined in CSS variables
+
+// Brand Colors
+$color-white: var(--color-white);
+$color-black: var(--color-black);
+$color-black-rgb: var(--color-black-rgb);
 
 // Primary Brand Colors
-$color-dark-green: #093324;    // Dark green from SVG
-$color-bright-green: #4CC494;  // Bright green from SVG
-$color-teal: #60B8BD;          // Teal from SVG
-$color-orange: #F29269;        // Orange from SVG
-$color-yellow: #FAF083;        // Yellow from SVG
+$color-dark-green: var(--color-dark-green);
+$color-bright-green: var(--color-bright-green);
+$color-teal: var(--color-teal);
+$color-orange: var(--color-orange);
+$color-yellow: var(--color-yellow);
 
 // Secondary/Accent Colors
-$color-light-teal: #E0F2F2;    // Light teal from SVG
-$color-pale-blue: #CCE7EA;     // Pale blue from SVG
-$color-dark-gray: #292929;     // Dark gray from SVG
+$color-light-teal: var(--color-light-teal);
+$color-pale-blue: var(--color-pale-blue);
+$color-dark-gray: var(--color-dark-gray);
 
 // Legacy variables (keeping for compatibility)
-$color-brand: $color-bright-green;
-$color-hairline: $color-dark-gray;
-$color-label: $color-dark-gray;
-$color-bg1: $color-dark-green;
-$color-bg2: $color-dark-gray;
-$color-text: $color-white;
-
-// CSS Custom Properties for use in components
-:root {
-  --color-white: #{$color-white};
-  --color-black: #{$color-black};
-  --color-black-rgb: #{hexToRGB(#000000)};
-  
-  // Primary Brand Colors
-  --color-dark-green: #{$color-dark-green};
-  --color-bright-green: #{$color-bright-green};
-  --color-teal: #{$color-teal};
-  --color-orange: #{$color-orange};
-  --color-yellow: #{$color-yellow};
-  
-  // Secondary Colors
-  --color-light-teal: #{$color-light-teal};
-  --color-pale-blue: #{$color-pale-blue};
-  --color-dark-gray: #{$color-dark-gray};
-  
-  // Legacy variables
-  --color-brand: #{$color-brand};
-  --color-hairline: #{$color-hairline};
-  --color-label: #{$color-label};
-  --color-bg1: #{$color-bg1};
-  --color-bg2: #{$color-bg2};
-  --color-text: #{$color-text};
-}
+$color-brand: var(--color-brand);
+$color-hairline: var(--color-hairline);
+$color-label: var(--color-label);
+$color-bg1: var(--color-bg1);
+$color-bg2: var(--color-bg2);
+$color-text: var(--color-text);
 
