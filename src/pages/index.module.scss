@@ -22,40 +22,22 @@
 
 .imageContainer {
   margin-bottom: 2rem;
-}
-
-.imagePlaceholder {
-  background: linear-gradient(135deg, var(--color-light-teal) 0%, var(--color-pale-blue) 100%);
-  border: 2px dashed var(--color-teal);
-  border-radius: 15px;
-  padding: 3rem 2rem;
-  margin: 0 auto;
-  max-width: 400px;
-  transition: all 0.3s ease;
-
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(96, 184, 189, 0.2);
-  }
-
-  p {
-    margin: 0;
-    color: var(--color-teal);
-    font-weight: 600;
-    font-size: 1.2rem;
-  }
-}
-
-.imageNote {
-  font-size: 0.9rem !important;
-  color: var(--color-dark-gray) !important;
-  margin-top: 0.5rem !important;
-  font-weight: 400 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .heroImage {
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  max-width: 100%;
+  height: auto;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  }
 }
 
 .textContent {

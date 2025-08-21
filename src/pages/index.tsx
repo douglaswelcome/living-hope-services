@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import styles from "./index.module.scss";
 
 export default function Home() {
@@ -13,28 +14,19 @@ export default function Home() {
 
       <div className={styles.container}>
         <div className={styles.content}>
-          {/* Placeholder for your generated image */}
           <div className={styles.imageContainer}>
-            <div className={styles.imagePlaceholder}>
-              <p>Image Placeholder</p>
-              <p className={styles.imageNote}>Your beautiful image will go here</p>
-            </div>
-            {/* Uncomment and replace with your actual image when ready:
             <Image
-              src="/your-image.jpg"
-              alt="Living Hope Services"
+              src="/logo.svg"
+              alt="Living Hope Services Logo"
               width={400}
-              height={300}
+              height={260}
               priority
               className={styles.heroImage}
             />
-            */}
           </div>
 
           <div className={styles.textContent}>
-            <h1 className={`${styles.title} headline-xl`}>
-              <span className={styles.brandName}>Living Hope Services</span>
-            </h1>
+            
             
             <h2 className={`${styles.subtitle} headline-lg-thin`}>Website Coming Soon</h2>
             
@@ -44,21 +36,6 @@ export default function Home() {
               the opportunity to rebuild their lives.
             </p>
 
-            <div className={styles.features}>
-              <div className={styles.feature}>
-                <span className={styles.featureIcon}>🏠</span>
-                <span>Residential Treatment</span>
-              </div>
-              <div className={styles.feature}>
-                <span className={styles.featureIcon}>💙</span>
-                <span>Individual Therapy</span>
-              </div>
-              <div className={styles.feature}>
-                <span className={styles.featureIcon}>🤝</span>
-                <span>Group Support</span>
-              </div>
-            </div>
-
             <div className={styles.contactInfo}>
               <p className={`${styles.contactText} body-md-bold`}>
                 For immediate assistance, please contact us:
@@ -66,7 +43,7 @@ export default function Home() {
               <div className={styles.contactDetails}>
                 <p className="body-md">📞 Phone: (555) 123-4567</p>
                 <p className="body-md">📧 Email: info@livinghopeservices.com</p>
-                <p className="body-md">🚨 24/7 Crisis Line: (555) 999-8888</p>
+
               </div>
             </div>
 
