@@ -3,6 +3,8 @@ import Image from "next/image";
 import styles from "./index.module.scss";
 
 export default function Home() {
+  const currentYear = new Date().getFullYear();
+  
   return (
     <>
       <Head>
@@ -48,7 +50,7 @@ export default function Home() {
             </div>
 
             <div className={styles.footer}>
-              <p className="body-sm">&copy; 2024 Living Hope Services. All rights reserved.</p>
+              <p className="body-sm">&copy; {currentYear} Living Hope Services. All rights reserved.</p>
             </div>
           </div>
         </div>
