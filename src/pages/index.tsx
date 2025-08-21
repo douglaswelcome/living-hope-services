@@ -32,13 +32,13 @@ export default function Home() {
           </div>
 
           <div className={styles.textContent}>
-            <h1 className={styles.title}>
+            <h1 className={`${styles.title} headline-xl`}>
               <span className={styles.brandName}>Living Hope Services</span>
             </h1>
             
-            <h2 className={styles.subtitle}>Website Coming Soon</h2>
+            <h2 className={`${styles.subtitle} headline-lg-thin`}>Website Coming Soon</h2>
             
-            <p className={styles.description}>
+            <p className={`${styles.description} body-lg`}>
               Professional addiction recovery and rehabilitation services in a supportive, 
               home-like environment. We believe everyone deserves a second chance and 
               the opportunity to rebuild their lives.
@@ -60,18 +60,18 @@ export default function Home() {
             </div>
 
             <div className={styles.contactInfo}>
-              <p className={styles.contactText}>
+              <p className={`${styles.contactText} body-md-bold`}>
                 For immediate assistance, please contact us:
               </p>
               <div className={styles.contactDetails}>
-                <p>📞 Phone: (555) 123-4567</p>
-                <p>📧 Email: info@livinghopeservices.com</p>
-                <p>🚨 24/7 Crisis Line: (555) 999-8888</p>
+                <p className="body-md">📞 Phone: (555) 123-4567</p>
+                <p className="body-md">📧 Email: info@livinghopeservices.com</p>
+                <p className="body-md">🚨 24/7 Crisis Line: (555) 999-8888</p>
               </div>
             </div>
 
             <div className={styles.footer}>
-              <p>&copy; 2024 Living Hope Services. All rights reserved.</p>
+              <p className="body-sm">&copy; 2024 Living Hope Services. All rights reserved.</p>
             </div>
           </div>
         </div>
