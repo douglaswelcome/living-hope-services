@@ -1,3 +1,5 @@
+@use "../../styles/foundations/response_mixins" as *;
+
 .footer {
   position: relative;
   background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
@@ -13,8 +15,25 @@
   }
 }
 
+.footerContainer {
+  @extend %grid-12;
+  grid-column: span 12;
+}
+
 .footerContent {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
   animation: fadeInUp 0.8s ease-out;
+  
+  @include breakpoint(w-med) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include breakpoint(w-sm) {
+    grid-template-columns: 1fr;
+  }
   
   @keyframes fadeInUp {
     from {
@@ -24,6 +43,36 @@
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+}
+
+.footerBottom {
+  grid-column: span 12;
+  border-top: 1px solid #374151;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  text-align: center;
+  color: #9ca3af;
+  
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #374151, transparent);
+  }
+  
+  p {
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: #d1d5db;
     }
   }
 }

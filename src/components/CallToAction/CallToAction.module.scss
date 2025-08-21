@@ -1,3 +1,5 @@
+@use "../../styles/foundations/response_mixins" as *;
+
 .callToAction {
   position: relative;
   background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
@@ -35,6 +37,18 @@
       opacity: 0.2;
     }
   }
+}
+
+.ctaContainer {
+  @extend %grid-12;
+  grid-column: span 12;
+  text-align: center;
+}
+
+.ctaContent {
+  grid-column: span 12;
+  position: relative;
+  z-index: 1;
 }
 
 .title {

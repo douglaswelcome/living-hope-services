@@ -4,14 +4,14 @@ import styles from "./Navigation.module.scss";
 const Navigation = () => {
   return (
     <nav className={`${styles.navigation} bg-white shadow-lg`} aria-label="Main navigation">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex items-center">
+      <div className={styles.navigationContainer}>
+        <div className={styles.navigationContent}>
+          <div className={styles.logoContainer}>
             <h1 className={`${styles.logo} text-2xl font-bold text-indigo-600`}>
               Living Hope Services
             </h1>
           </div>
-          <div className="hidden md:flex items-center space-x-8" role="navigation">
+          <div className={styles.navLinks} role="navigation">
             <Link href="/" className={`${styles.navLink} text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium`}>
               Home
             </Link>

@@ -1,3 +1,5 @@
+@use "../../styles/foundations/response_mixins" as *;
+
 .navigation {
   position: sticky;
   top: 0;
@@ -9,11 +11,41 @@
   }
 }
 
+.navigationContainer {
+  @extend %grid-12;
+  grid-column: span 12;
+  height: 4rem;
+  align-items: center;
+}
+
+.navigationContent {
+  grid-column: span 12;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   transition: color 0.3s ease;
   
   &:hover {
     color: #4f46e5;
+  }
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  
+  @include breakpoint(w-med) {
+    display: none; // Hide on mobile for now, could add hamburger menu later
   }
 }
 

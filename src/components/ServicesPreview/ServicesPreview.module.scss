@@ -1,3 +1,5 @@
+@use "../../styles/foundations/response_mixins" as *;
+
 .servicesSection {
   position: relative;
   
@@ -9,6 +11,38 @@
     right: 0;
     height: 1px;
     background: linear-gradient(90deg, transparent, #e5e7eb, transparent);
+  }
+}
+
+.servicesContainer {
+  @extend %grid-12;
+  grid-column: span 12;
+}
+
+.servicesGrid {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  animation: fadeInUp 0.8s ease-out;
+  
+  @include breakpoint(w-med) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include breakpoint(w-sm) {
+    grid-template-columns: 1fr;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 

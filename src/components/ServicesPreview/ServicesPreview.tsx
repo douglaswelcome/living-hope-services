@@ -40,11 +40,11 @@ const ServicesPreview = () => {
 
   return (
     <section className={`${styles.servicesSection} py-16 bg-white`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className={styles.servicesContainer}>
         <h2 className={`${styles.sectionTitle} text-3xl font-bold text-center text-gray-900 mb-12`}>
           Our Services
         </h2>
-        <div className={`${styles.servicesGrid} grid md:grid-cols-3 gap-8`}>
+        <div className={styles.servicesGrid}>
           {services.map((service, index) => (
             <div key={index} className={`${styles.serviceCard} text-center p-6 rounded-lg bg-gray-50`}>
               <div className={`${styles.iconContainer} w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4`}>

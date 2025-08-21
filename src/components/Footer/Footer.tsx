@@ -5,8 +5,8 @@ const Footer = () => {
 
   return (
     <footer className={`${styles.footer} bg-gray-800 text-white py-12`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`${styles.footerContent} grid md:grid-cols-4 gap-8`}>
+      <div className={styles.footerContainer}>
+        <div className={styles.footerContent}>
           <div className={styles.footerSection}>
             <h3 className={`${styles.footerTitle} text-xl font-bold mb-4`}>
               Living Hope Services
@@ -46,7 +46,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className={`${styles.footerBottom} border-t border-gray-700 mt-8 pt-8 text-center text-gray-300`}>
+        <div className={styles.footerBottom}>
           <p>&copy; {currentYear} Living Hope Services. All rights reserved.</p>
         </div>
       </div>
