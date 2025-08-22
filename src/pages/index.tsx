@@ -43,8 +43,8 @@ export default function Home() {
                 For immediate assistance, please contact us:
               </p>
               <div className={styles.contactDetails}>
-                <p className="body-md">📞 Phone: (555) 123-4567</p>
-                <p className="body-md">📧 Email: info@livinghopeservices.com</p>
+                {/* <p className="body-md">📞 Phone: (555) 123-4567</p> */}
+                <p className="body-md">Email: hello.livinghopeservices@gmail.com</p>
 
               </div>
             </div>
