@@ -4,7 +4,8 @@ import {
   HeroSection, 
   ServicesPreview, 
   CallToAction, 
-  Footer 
+  Footer,
+  BackgroundContainer
 } from "../components";
 
 export default function Home() {
@@ -17,13 +18,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <BackgroundContainer>
+      <div className="min-h-screen">
         <Navigation />
         <HeroSection />
         <ServicesPreview />
         <CallToAction />
         <Footer />
       </div>
+
+      </BackgroundContainer>
+  
     </>
   );
 }

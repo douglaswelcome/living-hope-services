@@ -2,7 +2,9 @@
 
 .callToAction {
   position: relative;
-  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(12, 200, 103, 0.2);
   overflow: hidden;
   
   &::before {
@@ -12,7 +14,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%230CC867" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
     pointer-events: none;
   }
   
@@ -23,18 +25,18 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(12, 200, 103, 0.05) 0%, transparent 70%);
     animation: pulse 4s ease-in-out infinite;
   }
   
   @keyframes pulse {
     0%, 100% {
       transform: scale(1);
-      opacity: 0.1;
+      opacity: 0.05;
     }
     50% {
       transform: scale(1.1);
-      opacity: 0.2;
+      opacity: 0.1;
     }
   }
 }
@@ -88,7 +90,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(79, 70, 229, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(12, 200, 103, 0.1), transparent);
     transition: left 0.5s;
   }
   
@@ -98,7 +100,7 @@
   
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 25px rgba(12, 200, 103, 0.2);
   }
   
   &:active {

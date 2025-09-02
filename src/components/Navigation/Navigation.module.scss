@@ -5,10 +5,10 @@
   top: 0;
   z-index: 50;
   transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
 
-  &:hover {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  }
+
+
 }
 
 .navigationContainer {
@@ -16,6 +16,7 @@
   grid-column: span 12;
   height: 4rem;
   align-items: center;
+  border-bottom: 1px solid rgba(12, 200, 103, 0.1);
 }
 
 .navigationContent {
@@ -35,7 +36,7 @@
   transition: color 0.3s ease;
   
   &:hover {
-    color: #4f46e5;
+    color: var(--color-bright-green);
   }
 }
 
@@ -60,7 +61,7 @@
     left: 50%;
     width: 0;
     height: 2px;
-    background-color: #4f46e5;
+    background-color: var(--color-bright-green);
     transition: all 0.3s ease;
     transform: translateX(-50%);
   }

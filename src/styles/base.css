@@ -12,7 +12,7 @@
   
   /* Primary Brand Colors */
   --color-dark-green: #093324;
-  --color-bright-green: #4CC494;
+  --color-bright-green: #0CC867;
   --color-teal: #60B8BD;
   --color-orange: #F29269;
   --color-yellow: #FAF083;
@@ -22,19 +22,24 @@
   --color-pale-blue: #CCE7EA;
   --color-dark-gray: #292929;
   
+  /* New Background Colors */
+  --color-background: #FAFAF5;
+  --color-background-subtle: rgba(12, 200, 103, 0.03);
+  --color-background-accent: rgba(96, 184, 189, 0.05);
+  
   /* Legacy variables */
   --color-brand: var(--color-bright-green);
   --color-hairline: var(--color-dark-gray);
   --color-label: var(--color-dark-gray);
-  --color-bg1: var(--color-dark-green);
-  --color-bg2: var(--color-dark-gray);
-  --color-text: var(--color-white);
+  --color-bg1: var(--color-background);
+  --color-bg2: var(--color-background-subtle);
+  --color-text: var(--color-dark-green);
 
-  --background: var(--color-bg1);
-  --foreground: var(--color-white);
+  --background: var(--color-background);
+  --foreground: var(--color-dark-green);
 
-  --shadow: 0.25rem 0.25rem 0.75rem rgba(var(--color-black-rgb), 0.5);
-  --shadow-hover: 0.25rem 0.25rem 1.25rem rgba(var(--color-black-rgb), 0.5);
+  --shadow: 0.25rem 0.25rem 0.75rem rgba(var(--color-black-rgb), 0.1);
+  --shadow-hover: 0.25rem 0.25rem 1.25rem rgba(var(--color-black-rgb), 0.15);
   --border: 1px solid var(--color-hairline);
   --border-hover: 2px solid var(--color-brand);
   --border-radius: 1rem;

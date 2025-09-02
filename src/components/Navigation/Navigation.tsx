@@ -1,33 +1,32 @@
 import Link from "next/link";
+import { Logo } from "../index";
 import styles from "./Navigation.module.scss";
 
 const Navigation = () => {
   return (
-    <nav className={`${styles.navigation} bg-white shadow-lg`} aria-label="Main navigation">
+    <nav className={`${styles.navigation} mainBody`} aria-label="Main navigation">
       <div className={styles.navigationContainer}>
         <div className={styles.navigationContent}>
           <div className={styles.logoContainer}>
-            <h1 className={`${styles.logo} text-2xl font-bold text-indigo-600`}>
-              Living Hope Services
-            </h1>
+            <Logo variant="text" className="h-8" color="var(--color-bright-green)" />
           </div>
-          <div className={styles.navLinks} role="navigation">
-            <Link href="/" className={`${styles.navLink} text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium`}>
+          {/* <div className={styles.navLinks} role="navigation">
+            <Link href="/" className={`${styles.navLink} text-gray-700 hover:text-[var(--color-bright-green)] px-3 py-2 rounded-md text-sm font-medium`}>
               Home
             </Link>
-            <Link href="/services" className={`${styles.navLink} text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium`}>
+            <Link href="/services" className={`${styles.navLink} text-gray-700 hover:text-[var(--color-bright-green)] px-3 py-2 rounded-md text-sm font-medium`}>
               Services
             </Link>
-            <Link href="/about" className={`${styles.navLink} text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium`}>
+            <Link href="/about" className={`${styles.navLink} text-gray-700 hover:text-[var(--color-bright-green)] px-3 py-2 rounded-md text-sm font-medium`}>
               About
             </Link>
-            <Link href="/contact" className={`${styles.navLink} text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium`}>
+            <Link href="/contact" className={`${styles.navLink} text-gray-700 hover:text-[var(--color-bright-green)] px-3 py-2 rounded-md text-sm font-medium`}>
               Contact
             </Link>
-            <Link href="/resources" className={`${styles.navLink} text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium`}>
+            <Link href="/resources" className={`${styles.navLink} text-gray-700 hover:text-[var(--color-bright-green)] px-3 py-2 rounded-md text-sm font-medium`}>
               Resources
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </nav>

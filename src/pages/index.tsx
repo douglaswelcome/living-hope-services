@@ -1,12 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "./index.module.scss";
+import { BackgroundContainer } from "@/components";
 
 export default function Home() {
   const currentYear = new Date().getFullYear();
   
   return (
-    <>
+    <BackgroundContainer>
       <Head>
         <title>Living Hope Services - Coming Soon</title>
         <meta name="description" content="Living Hope Services - Professional addiction recovery and rehabilitation services. Website coming soon." />
@@ -55,6 +56,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </>
+    </BackgroundContainer>
   );
 }
