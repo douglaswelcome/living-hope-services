@@ -50,6 +50,7 @@ p {
   font-size: 1rem;
   font-weight: 300;
   font-family: var(--font-mulish);
+  color: var(--color-green-gray);
 }
 
 
@@ -63,6 +64,7 @@ b {
 }
 
 .display1{
+  font-family: var(--font-montserrat);
   font-size: 6.5rem;
   font-weight: 200;
   line-height: 1.25;
@@ -77,6 +79,7 @@ b {
 }
 
 .display2{
+  font-family: var(--font-montserrat);
   font-size: 5rem;
   font-weight: 200;
   line-height: 1.75;
@@ -91,8 +94,9 @@ b {
 }
 
 h1 {
+  font-family: var(--font-montserrat);
   font-size: 4rem;
-  font-weight: 200;
+  font-weight: 700;
   line-height: 1.25;
 
   @include breakpoint(w-lg) {
@@ -105,6 +109,7 @@ h1 {
 }
 
 h2 {
+  font-family: var(--font-montserrat);
   //big titles
   font-size: 2rem;
   font-weight: 200;
@@ -116,7 +121,7 @@ h2 {
 }
 
 h3 {
-  font-family: var(--font-josefin-sans);
+  font-family: var(--font-montserrat);
   font-weight: 700;
   font-size: 1.5rem;
   color: var(--color-brand);
@@ -128,6 +133,7 @@ h3 {
 }
 
 h4 {
+  font-family: var(--font-montserrat);
   font-size: 1.25rem;
   font-weight: 200;
   line-height: 1.75rem;
@@ -139,6 +145,7 @@ h4 {
 }
 
 h5 {
+  font-family: var(--font-montserrat);
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.4;
@@ -151,33 +158,34 @@ h5 {
 }
 
 h6 {
+  font-family: var(--font-montserrat);
   //used for menus
   font-size: 0.875rem;
   font-weight: 200;
   line-height: 1.25rem;
 }
 
-// Josefin Sans Headline Typography
+// Montserrat Headline Typography
 .headline-thin {
-  font-family: var(--font-josefin-sans);
+  font-family: var(--font-montserrat);
   font-weight: 300;
   font-style: normal;
 }
 
 .headline-bold {
-  font-family: var(--font-josefin-sans);
+  font-family: var(--font-montserrat);
   font-weight: 700;
   font-style: normal;
 }
 
 .headline-thin-italic {
-  font-family: var(--font-josefin-sans);
+  font-family: var(--font-montserrat);
   font-weight: 300;
   font-style: italic;
 }
 
 .headline-bold-italic {
-  font-family: var(--font-josefin-sans);
+  font-family: var(--font-montserrat);
   font-weight: 700;
   font-style: italic;
 }
@@ -297,6 +305,7 @@ h6 {
   font-family: var(--font-mulish);
   font-weight: 300;
   font-style: normal;
+  color: var(--color-green-gray);
 }
 
 .body-text-bold {

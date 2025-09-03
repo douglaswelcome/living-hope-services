@@ -1,45 +1,52 @@
+// Logo.tsx
 import React from "react";
+import LogoIcon from "./LogoIcon";
+import LogoText from "./LogoText";
+import LogoText2 from "./LogoText2";
 
 interface LogoProps {
-  variant?: 'icon' | 'text';
+  variant?: 'icon' | 'text' | 'text2';
   className?: string;
   width?: number;
   height?: number;
   color?: string;
 }
 
-const Logo: React.FC<LogoProps> = ({ 
+const Logo: React.FC<LogoProps> = ({
   variant = 'icon',
-  className = "w-8 h-9", 
-  width, 
-  height, 
-  color = "currentColor" 
+  className = "w-8 h-9",
+  width,
+  height,
+  color = "currentColor"
 }) => {
   if (variant === 'text') {
     return (
-      <img 
-        src="/logo-with-text.svg"
-        alt="Living Hope Services Logo"
+      <LogoText
         className={className}
-        style={{ 
-          width: width ? `${width}px` : 'auto',
-          height: height ? `${height}px` : 'auto',
-          filter: color !== 'currentColor' ? `brightness(0) saturate(100%) invert(1) sepia(1) saturate(5) hue-rotate(${color === 'var(--color-bright-green)' ? '120deg' : color === 'var(--color-teal)' ? '180deg' : '0deg'})` : 'none'
-        }}
+        width={width}
+        height={height}
+        color={color}
       />
     );
   }
-
+  
+  if (variant === 'text2') {
+    return (
+      <LogoText2
+        className={className}
+        width={width}
+        height={height}
+        color={color}
+      />
+    );
+  }
+  
   return (
-    <img 
-      src="/logo-icon.svg"
-      alt="Living Hope Services Icon"
+    <LogoIcon
       className={className}
-      style={{ 
-        width: width ? `${width}px` : 'auto',
-        height: height ? `${height}px` : 'auto',
-        filter: color !== 'currentColor' ? `brightness(0) saturate(100%) invert(1) sepia(1) saturate(5) hue-rotate(${color === 'var(--color-bright-green)' ? '120deg' : color === 'var(--color-teal)' ? '180deg' : '0deg'})` : 'none'
-      }}
+      width={width}
+      height={height}
+      color={color}
     />
   );
 };

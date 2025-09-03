@@ -1,0 +1,57 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+  outline: none;
+  box-sizing: border-box;
+  
+  // Explicitly override any inherited link styles from typography
+  &::after {
+    display: none !important;
+  }
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  &:focus {
+    outline: 2px solid var(--color-green);
+    outline-offset: 2px;
+  }
+}
+
+.primary {
+  background-color: var(--color-green);
+  color: white;
+  
+  &:hover:not(:disabled) {
+    background-color: var(--color-dark-green);
+  }
+  
+  &:active:not(:disabled) {
+  }
+}
+
+.secondary {
+  background-color: transparent;
+  color: var(--color-green);
+  border: 2px solid var(--color-green);
+  
+  &:hover:not(:disabled) {
+    background-color: var(--color-dark-green);
+    border-color: var(--color-dark-green);
+    color: white;
+  }
+  
+  &:active:not(:disabled) {
+  }
+}

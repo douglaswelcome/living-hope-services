@@ -1,0 +1,32 @@
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  grid-column: span 12;
+}
+
+.leftDecoration,
+.rightDecoration {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.crossIcon {
+  width: 0.75rem;
+  height: 0.75rem;
+  color: var(--color-dark-green);
+}
+
+.decorativeLine {
+  width: 2rem;
+  height: 0.125rem;
+  background-color: var(--color-bright-green);
+}
+
+.title {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

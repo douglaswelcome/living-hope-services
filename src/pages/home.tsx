@@ -2,13 +2,53 @@ import Head from "next/head";
 import { 
   Navigation, 
   HeroSection, 
-  ServicesPreview, 
+  ServicesPreview,
+  AddressSection,
   CallToAction, 
   Footer,
-  BackgroundContainer
+  BackgroundContainer,
+  FAQ,
+  Accreditations,
+  ContactForm
 } from "../components";
 
 export default function Home() {
+  // Sample accreditation data - replace with your actual accreditations
+  const accreditations = [
+    {
+      icon: (
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" />
+        </svg>
+      ),
+      label: "BBB Accredited"
+    },
+    {
+      icon: (
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" />
+        </svg>
+      ),
+      label: "State Licensed"
+    },
+    {
+      icon: (
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L15.09 8.26L22 9L16.91 13.74L18.18 20.02L12 17.77L5.82 20.02L7.09 13.74L2 9L8.91 8.26L12 2Z" />
+        </svg>
+      ),
+      label: "Industry Certified"
+    },
+    {
+      icon: (
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M9 12L11 14L15 10M7.835 4.697C8.287 4.257 8.887 4 9.5 4C10.113 4 10.713 4.257 11.165 4.697L12 5.5L12.835 4.697C13.287 4.257 13.887 4 14.5 4C15.113 4 15.713 4.257 16.165 4.697L17 5.5L17.835 4.697C18.287 4.257 18.887 4 19.5 4C20.113 4 20.713 4.257 21.165 4.697L22 5.5V19C22 20.1046 21.1046 21 20 21H4C2.89543 21 2 20.1046 2 19V5.5L2.835 4.697C3.287 4.257 3.887 4 4.5 4C5.113 4 5.713 4.257 6.165 4.697L7 5.5L7.835 4.697Z" />
+        </svg>
+      ),
+      label: "Government Approved"
+    }
+  ];
+
   return (
     <>
       <Head>
@@ -22,8 +62,16 @@ export default function Home() {
       <div className="min-h-screen">
         <Navigation />
         <HeroSection />
-        <ServicesPreview />
-        <CallToAction />
+        <AddressSection /> 
+        <Accreditations 
+          title="Our Accreditations"
+          subtitle="We maintain the highest standards of care and professionalism, backed by industry recognition and government approval."
+          accreditations={accreditations} 
+        />
+
+        <FAQ />
+
+        <ContactForm />
         <Footer />
       </div>
 

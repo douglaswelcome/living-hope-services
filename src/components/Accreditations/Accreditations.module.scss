@@ -1,0 +1,117 @@
+@use "../../styles/foundations/response_mixins" as *;
+
+.accreditations {
+  grid-column: span 3;
+  padding: 3rem 0;
+}
+
+
+.content {
+  width: 100%;
+  max-width: var(--xlg-page-width);
+  
+  @include breakpoint(w-lg) {
+    max-width: var(--lg-page-width);
+  }
+  
+  @include breakpoint(w-med) {
+    max-width: var(--med-page-width);
+  }
+  
+  @include breakpoint(w-sm) {
+    max-width: calc(100% - 2rem);
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  max-width: 48rem;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+  text-align: center;
+  grid-column: 4 / span 6;
+  
+  @include breakpoint(w-med) {
+    grid-column: 3 / span 8;
+  }
+  
+  @include breakpoint(w-sm) {
+    grid-column: 2 / span 10;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.accreditationsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+  
+  @include breakpoint(w-med) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+  
+  @include breakpoint(w-sm) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.accreditationItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  svg {
+    width: 2rem;
+    height: 2rem;
+    color: var(--color-dark-green);
+  }
+  
+  @include breakpoint(w-sm) {
+    width: 3.5rem;
+    height: 3.5rem;
+    
+    svg {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+  }
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.4;
+  max-width: 8rem;
+  
+  @include breakpoint(w-sm) {
+    font-size: 0.8rem;
+    max-width: 6rem;
+  }
+}

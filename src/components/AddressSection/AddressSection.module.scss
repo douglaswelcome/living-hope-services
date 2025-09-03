@@ -1,16 +1,25 @@
 @use "../../styles/foundations/response_mixins" as *;
 
-.servicesSection {
-  // Add any section-specific styles here if needed
+.addressSection {
+  padding: 4rem 0;
+  position: relative;
 }
 
-.servicesContainer {
+.addressContainer {
   @extend %grid-12;
   grid-column: span 12;
   text-align: center;
 }
 
-.servicesGrid {
+.subtitle {
+  font-size: 1.125rem;
+  max-width: 48rem;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+  grid-column: 4 / span 6;
+}
+
+.cardsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
@@ -27,6 +36,17 @@
   }
 }
 
-.serviceDescription {
+.address {
+  font-style: normal;
+  font-family: var(--font-mulish);
   line-height: 1.6;
-} 
+}
+
+.addressLine {
+  display: block;
+  margin-bottom: 0.25rem;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

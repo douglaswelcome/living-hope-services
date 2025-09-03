@@ -1,0 +1,27 @@
+[
+  {
+    "id": "house-manager",
+    "question": "Is there a house manager on site?",
+    "answer": "Yes—each home has a dedicated house manager who lives on site and helps lead the daily rhythm of the home."
+  },
+  {
+    "id": "religious-program",
+    "question": "Is this a religious program?",
+    "answer": "We are faith-guided, which means we incorporate prayer, devotionals, and biblical counseling into life at Living Hope. You don't need to have it all figured out—we just ask for openness and respect."
+  },
+  {
+    "id": "insurance",
+    "question": "Do you accept insurance?",
+    "answer": "Living Hope is a private-pay program. We're happy to talk through affordability and what the investment covers."
+  },
+  {
+    "id": "work-school",
+    "question": "Can I work or attend school during my stay?",
+    "answer": "Absolutely. Many residents hold jobs, attend school, or volunteer in the community during their time here."
+  },
+  {
+    "id": "typical-stay",
+    "question": "How long is the typical stay?",
+    "answer": "Stays are typically 3–6 months, but we'll work with you to determine what's best for your next season."
+  }
+]

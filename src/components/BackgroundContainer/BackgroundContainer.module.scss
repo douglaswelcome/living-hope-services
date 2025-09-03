@@ -1,10 +1,39 @@
 @use "../../styles/foundations/response_mixins" as *;
 
 .backgroundContainer {
-  min-height: 100vh;
   position: relative;
-  background: var(--color-background);
-  overflow: hidden;
+  min-height: 100vh;
+  
+  // Temporarily hidden - background elements don't look good
+  /*
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><filter id="blur"><feGaussianBlur stdDeviation="1.5"/></filter></defs><circle cx="18" cy="22" r="8" fill="%23184C2F" opacity="0.8" filter="url(%23blur)"/><circle cx="82" cy="78" r="14" fill="%23184C2F" opacity="0.7" filter="url(%23blur)"/><circle cx="45" cy="12" r="11" fill="%23184C2F" opacity="0.9" filter="url(%23blur)"/><circle cx="12" cy="68" r="16" fill="%23184C2F" opacity="0.75" filter="url(%23blur)"/><circle cx="88" cy="28" r="9" fill="%23184C2F" opacity="0.85" filter="url(%23blur)"/><circle cx="72" cy="62" r="13" fill="%23184C2F" opacity="0.8" filter="url(%23blur)"/><circle cx="35" cy="85" r="7" fill="%23184C2F" opacity="0.9" filter="url(%23blur)"/><circle cx="95" cy="45" r="12" fill="%23184C2F" opacity="0.75" filter="url(%23blur)"/><circle cx="25" cy="35" r="10" fill="%23184C2F" opacity="0.85" filter="url(%23blur)"/><circle cx="65" cy="18" r="6" fill="%23184C2F" opacity="0.95" filter="url(%23blur)"/></svg>');
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  &::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><filter id="grainOverlay"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncR type="linear" slope="0.1" intercept="0.9"/><feFuncG type="linear" slope="0.1" intercept="0.9"/><feFuncB type="linear" slope="0.1" intercept="0.9"/></feComponentTransfer></filter></defs><rect width="100" height="100" filter="url(%23grainOverlay)" opacity="0.8"/></svg>');
+    pointer-events: none;
+    z-index: -1;
+  }
+  */
 }
 
 .backgroundOverlay {

@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,700;1,300;1,700&family=Mulish:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,700;1,300;1,700&family=Mulish:ital,wght@0,300;0,700;1,300;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 @import "tailwindcss";
 
 :root {
   --font-josefin-sans: "Josefin Sans", Arial, sans-serif;
   --font-mulish: "Mulish", Arial, sans-serif;
+  --font-montserrat: "Montserrat", Arial, sans-serif;
 
   /* Brand Colors from SVG */
   --color-white: #ffffff;
@@ -11,16 +12,21 @@
   --color-black-rgb: 0, 0, 0;
   
   /* Primary Brand Colors */
+  --color-green: #184C2F;
   --color-dark-green: #093324;
-  --color-bright-green: #0CC867;
+  --color-bright-green: #7CAE80;
+  --color-light-green: #d6e3cc;
+
+  
+  /* Secondary Colors */
   --color-teal: #60B8BD;
   --color-orange: #F29269;
   --color-yellow: #FAF083;
-  
-  /* Secondary Colors */
   --color-light-teal: #E0F2F2;
   --color-pale-blue: #CCE7EA;
+  --color-green-gray: #5A6E64;
   --color-dark-gray: #292929;
+
   
   /* New Background Colors */
   --color-background: #FAFAF5;
@@ -29,7 +35,7 @@
   
   /* Legacy variables */
   --color-brand: var(--color-bright-green);
-  --color-hairline: var(--color-dark-gray);
+  --color-hairline: var(--color-light-green);
   --color-label: var(--color-dark-gray);
   --color-bg1: var(--color-background);
   --color-bg2: var(--color-background-subtle);

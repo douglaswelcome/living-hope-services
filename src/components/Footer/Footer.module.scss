@@ -55,7 +55,6 @@
   margin-top: 2rem;
   padding-top: 2rem;
   text-align: center;
-  color: var(--color-dark-gray);
   
   position: relative;
   
@@ -105,7 +104,6 @@
 .footerDescription {
   line-height: 1.6;
   transition: color 0.3s ease;
-  color: var(--color-dark-gray);
 }
 
 .footerSection:hover .footerDescription {
@@ -142,7 +140,6 @@
     position: relative;
     padding-left: 0;
     transition: all 0.3s ease;
-    color: var(--color-dark-gray);
     
     &::before {
       content: '';
