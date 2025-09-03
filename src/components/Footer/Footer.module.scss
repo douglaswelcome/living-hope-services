@@ -2,19 +2,7 @@
 
 .footer {
   position: relative;
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(12, 200, 103, 0.1);
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(12, 200, 103, 0.2), transparent);
-  }
+  border-top: 1px solid var(--color-hairline);
 }
 
 .footerContainer {
@@ -25,15 +13,11 @@
 .footerContent {
   grid-column: span 12;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
   animation: fadeInUp 0.8s ease-out;
   
   @include breakpoint(w-med) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  @include breakpoint(w-sm) {
     grid-template-columns: 1fr;
   }
   
@@ -71,6 +55,7 @@
   
   p {
     transition: color 0.3s ease;
+    color: var(--color-green-gray);
     
     &:hover {
       color: var(--color-bright-green);
@@ -79,40 +64,33 @@
 }
 
 .footerSection {
-  transition: transform 0.3s ease;
-  
-  &:hover {
-    transform: translateY(-2px);
+  &.contactSection {
+    text-align: right;
+    
+    @include breakpoint(w-med) {
+      text-align: left;
+    }
   }
 }
 
 .footerTitle {
   position: relative;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
   
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 40px;
-    height: 2px;
-    background: linear-gradient(45deg, var(--color-bright-green), var(--color-teal));
-    border-radius: 1px;
-  }
+
 }
 
 .footerDescription {
   line-height: 1.6;
-  transition: color 0.3s ease;
-}
-
-.footerSection:hover .footerDescription {
-  color: var(--color-bright-green);
+  color: var(--color-green-gray);
 }
 
 .footerSubtitle {
   position: relative;
   transition: color 0.3s ease;
+  font-weight: 600;
   
   &::after {
     content: '';
@@ -136,33 +114,16 @@
 }
 
 .footerList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
   li {
-    position: relative;
-    padding-left: 0;
-    transition: all 0.3s ease;
-    
-    &::before {
-      content: '';
-      position: absolute;
-      left: -8px;
-      top: 50%;
-      width: 4px;
-      height: 4px;
-      background: var(--color-teal);
-      border-radius: 50%;
-      transform: translateY(-50%);
-      transition: all 0.3s ease;
-    }
+    transition: color 0.3s ease;
+    color: var(--color-green-gray);
     
     &:hover {
       color: var(--color-bright-green);
-      padding-left: 8px;
-      
-      &::before {
-        background: var(--color-bright-green);
-        width: 6px;
-        height: 6px;
-      }
     }
   }
 } 

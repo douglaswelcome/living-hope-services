@@ -9,7 +9,8 @@ import {
   BackgroundContainer,
   FAQ,
   Accreditations,
-  ContactForm
+  ContactForm,
+  FounderStory
 } from "../components";
 
 export default function Home() {
@@ -63,14 +64,25 @@ export default function Home() {
         <Navigation />
         <HeroSection />
         <AddressSection /> 
-        <Accreditations 
+  
+
+        <FounderStory 
+          title="Our Story"
+          subtitle="A Journey of Hope and Recovery"
+          story={[
+            "Living Hope Services began with a simple conversation on the way to a church volunteer event. Brett Cardoza, a pastor, and Louis Grego, a recovering addict, shared their stories. Louis opened up about his recovery journey, how difficult it was to walk the path alone, and how finding community through his church and sober living home gave him strength, accountability, and hope.",
+            "He shared that if he ever had the chance, he would walk alongside other men in recovery, offering the kind of support and brotherhood he wished he had earlier. With a foundation built on faith, a commitment to personal mentorship, and a heart for serving others, Louis saw what worked and wanted to help replicate it for others.",
+            "Brett listened, inspired by Louis's vision and courage, and recognized the opportunity to join him in building something lasting. Together, they founded Living Hope Services, a place where men can find not only housing but also a supportive network, spiritual guidance, and a pathway toward lasting recovery and stability."
+          ]}
+          imageSrc="/images/founder.jpg"
+          imageAlt="Founder of Living Hope Services"
+        />
+              <Accreditations 
           title="Our Accreditations"
           subtitle="We maintain the highest standards of care and professionalism, backed by industry recognition and government approval."
           accreditations={accreditations} 
         />
-
         <FAQ />
-
         <ContactForm />
         <Footer />
       </div>

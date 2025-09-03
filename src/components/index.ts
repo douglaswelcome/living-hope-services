@@ -10,4 +10,5 @@ export { default as Logo } from './Logo/Logo';
 export { default as Accreditations } from './Accreditations/Accreditations';
 export { default as ContactForm } from './ContactForm/ContactForm';
 export { default as Input } from './Input/Input';
+export { default as FounderStory } from './FounderStory/FounderStory';
 export { BackgroundContainer } from './BackgroundContainer/BackgroundContainer'; 

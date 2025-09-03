@@ -12,7 +12,7 @@ interface ContactFormProps {
 
 const ContactForm: React.FC<ContactFormProps> = ({
   title = "Contact Our Team",
-  subtitle = "We're here to answer your questions confidentially",
+  subtitle = "",
   className = ""
 }) => {
   const [formData, setFormData] = useState({
@@ -138,8 +138,8 @@ const ContactForm: React.FC<ContactFormProps> = ({
                   name="phone"
                   label="Phone Number"
                   type="tel"
-                  placeholder="Your phone number (optional)"
-                  required={false}
+                  placeholder="Your phone number"
+                  required={true}
                   value={formData.phone}
                   onChange={handleInputChange}
                 />
@@ -176,7 +176,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
             <div className={styles.infoColumn}>
               {/* Testimonial Box */}
               <div className={styles.testimonialBox}>
-                <div className={styles.quoteIcon}>"</div>
+                <div className={styles.quoteIcon}>&quot;</div>
                 <blockquote className={styles.testimonialText}>
                   I was nervous about reaching out, but the staff responded quickly and compassionately. They made the entire process feel comfortable and respectful from the first contact.
                 </blockquote>

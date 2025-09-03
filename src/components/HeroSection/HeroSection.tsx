@@ -8,12 +8,12 @@ const HeroSection = () => {
       <div className={styles.heroContainer}>
         <div className={styles.heroContent}>
           <div className={styles.textColumn}>
-            <h1 className={`${styles.title} text-4xl md:text-6xl font-bold text-gray-900 mb-6`}>
+            <h1 className={`${styles.title} display2 mb-6`}>
               Find Your Path to
-              <span className={styles.highlight}> Recovery</span>
+              <span className="hero-highlight"> Recovery</span>
             </h1>
-            <p className={`${styles.subtitle} text-xl text-gray-600 mb-8 max-w-3xl`}>
-            Living Hope Services operates men’s homes that are more than just housing. Our faith-based program provides a clean, structured, and supportive environment where men can heal in recovery and find resources for lasting stability and hope.            </p>
+            <p className={`${styles.subtitle} mb-8 max-w-3xl`}>
+            Living Hope Services operates men's homes that are more than just housing. Our faith-based program provides a clean, structured, and supportive environment where men can heal in recovery and find resources for lasting stability and hope.            </p>
             <div className={`${styles.buttonContainer} flex flex-col sm:flex-row gap-4`}>
               <Button 
                 variant="primary"

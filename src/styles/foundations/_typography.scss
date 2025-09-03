@@ -4,7 +4,7 @@
 
 
 body {
-  font-family: var(--font-mulish);
+  font-family: var(--font-oxygen);
 }
 
 a, button, [role="button"], .interactive {
@@ -49,14 +49,14 @@ a, button, [role="button"], .interactive {
 p {
   font-size: 1rem;
   font-weight: 300;
-  font-family: var(--font-mulish);
+  font-family: var(--font-oxygen);
   color: var(--color-green-gray);
 }
 
 
 b {
   font-weight: 700;
-  font-family: var(--font-mulish);
+  font-family: var(--font-oxygen);
 }
 
 .label_text {
@@ -81,8 +81,8 @@ b {
 .display2{
   font-family: var(--font-montserrat);
   font-size: 5rem;
-  font-weight: 200;
-  line-height: 1.75;
+  font-weight: 700;
+  line-height: 1.25;
 
   @include breakpoint(w-lg) {
     font-size: 6.5rem;
@@ -98,6 +98,7 @@ h1 {
   font-size: 4rem;
   font-weight: 700;
   line-height: 1.25;
+  color: var(--color-dark-green);
 
   @include breakpoint(w-lg) {
     font-size: 3rem;
@@ -114,6 +115,7 @@ h2 {
   font-size: 2rem;
   font-weight: 200;
   line-height: 1.25;
+  color: var(--color-dark-green);
 
   @include breakpoint(w-med) {
     font-size: calc(0.8rem + 2vw);
@@ -124,7 +126,7 @@ h3 {
   font-family: var(--font-montserrat);
   font-weight: 700;
   font-size: 1.5rem;
-  color: var(--color-brand);
+  color: var(--color-dark-green);
   text-transform: uppercase;
 
   @include breakpoint(w-sm) {
@@ -137,6 +139,7 @@ h4 {
   font-size: 1.25rem;
   font-weight: 200;
   line-height: 1.75rem;
+  color: var(--color-dark-green);
 
   @include breakpoint(w-med) {
     font-size: 1rem;
@@ -149,7 +152,7 @@ h5 {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.4;
-  color: var(--color-brand);
+  color: var(--color-dark-green);
   text-transform: uppercase;
 
   @include breakpoint(w-med) {
@@ -163,6 +166,7 @@ h6 {
   font-size: 0.875rem;
   font-weight: 200;
   line-height: 1.25rem;
+  color: var(--color-dark-green);
 }
 
 // Montserrat Headline Typography
@@ -300,28 +304,28 @@ h6 {
   }
 }
 
-// Mulish Body Typography
+// Oxygen Body Typography
 .body-text {
-  font-family: var(--font-mulish);
+  font-family: var(--font-oxygen);
   font-weight: 300;
   font-style: normal;
   color: var(--color-green-gray);
 }
 
 .body-text-bold {
-  font-family: var(--font-mulish);
+  font-family: var(--font-oxygen);
   font-weight: 700;
   font-style: normal;
 }
 
 .body-text-italic {
-  font-family: var(--font-mulish);
+  font-family: var(--font-oxygen);
   font-weight: 300;
   font-style: italic;
 }
 
 .body-text-bold-italic {
-  font-family: var(--font-mulish);
+  font-family: var(--font-oxygen);
   font-weight: 700;
   font-style: italic;
 }

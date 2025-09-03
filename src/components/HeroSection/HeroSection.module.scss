@@ -53,26 +53,15 @@
   }
 }
 
-.highlight {
-  position: relative;
-  
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: var(--color-dark-green);
-    border-radius: 2px;
-  }
-}
+
 
 .subtitle {
   position: relative;
   z-index: 1;
   animation: fadeInUp 1s ease-out 0.2s both;
   line-height: 1.6;
+  font-size: 1.125rem;
+  font-weight: 300;
 }
 
 .buttonContainer {
@@ -107,9 +96,4 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
-  
-  &:hover {
-    transform: scale(1.02);
-  }
 } 

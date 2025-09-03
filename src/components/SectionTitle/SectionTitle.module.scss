@@ -23,10 +23,11 @@
 .decorativeLine {
   width: 2rem;
   height: 0.125rem;
-  background-color: var(--color-bright-green);
+  background-color: var(--color-orange);
 }
 
 .title {
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  color: var(--color-green);
 }

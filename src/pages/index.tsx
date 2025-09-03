@@ -45,13 +45,13 @@ export default function Home() {
               </p>
               <div className={styles.contactDetails}>
                 {/* <p className="body-md">📞 Phone: (555) 123-4567</p> */}
-                <p className="body-md">Email: hello.livinghopeservices@gmail.com</p>
+                <p>Email: hello.livinghopeservices@gmail.com</p>
 
               </div>
             </div>
 
             <div className={styles.footer}>
-              <p className="body-sm">&copy; {currentYear} Living Hope Services. All rights reserved.</p>
+              <p>&copy; {currentYear} Living Hope Services. All rights reserved.</p>
             </div>
           </div>
         </div>

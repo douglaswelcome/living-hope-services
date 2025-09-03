@@ -56,9 +56,9 @@ const config: Config = {
         sm: 'calc(var(--radius) - 4px)',
       },
       fontFamily: {
-        sans: ['var(--font-mulish)', 'Arial', 'sans-serif'],
-        josefin: ['var(--font-josefin-sans)', 'Arial', 'sans-serif'],
-        mulish: ['var(--font-mulish)', 'Arial', 'sans-serif'],
+        sans: ['var(--font-oxygen)', 'Arial', 'sans-serif'],
+        oxygen: ['var(--font-oxygen)', 'Arial', 'sans-serif'],
+        montserrat: ['var(--font-montserrat)', 'Arial', 'sans-serif'],
       },
     },
   },
