@@ -1,7 +1,14 @@
 export { default as Navigation } from './Navigation/Navigation';
 export { default as HeroSection } from './HeroSection/HeroSection';
 export { default as ServicesPreview } from './ServicesPreview/ServicesPreview';
+export { default as AddressSection } from './AddressSection/AddressSection';
+export { default as Card } from './Card/Card';
+export { default as FAQ } from './FAQ/FAQ';
 export { default as CallToAction } from './CallToAction/CallToAction';
 export { default as Footer } from './Footer/Footer';
 export { default as Logo } from './Logo/Logo';
+export { default as Accreditations } from './Accreditations/Accreditations';
+export { default as ContactForm } from './ContactForm/ContactForm';
+export { default as Input } from './Input/Input';
+export { default as FounderStory } from './FounderStory/FounderStory';
 export { BackgroundContainer } from './BackgroundContainer/BackgroundContainer'; 

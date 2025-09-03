@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./ServicesPreview.module.scss";
+import SectionTitle from "../SectionTitle/SectionTitle";
+import Card from "../Card/Card";
 
 interface ServiceCard {
   icon: React.ReactNode;
@@ -39,24 +41,21 @@ const ServicesPreview = () => {
   ];
 
   return (
-    <section className={`${styles.servicesSection} py-16 bg-white`}>
+    <section className={`${styles.servicesSection} py-16 mainBody`}>
       <div className={styles.servicesContainer}>
-        <h2 className={`${styles.sectionTitle} text-3xl font-bold text-center text-gray-900 mb-12`}>
-          Our Services
-        </h2>
+        <SectionTitle title="Our Services" />
         <div className={styles.servicesGrid}>
           {services.map((service, index) => (
-            <div key={index} className={`${styles.serviceCard} text-center p-6 rounded-lg bg-gray-50`}>
-              <div className={`${styles.iconContainer} w-16 h-16 bg-[var(--color-light-teal)] rounded-full flex items-center justify-center mx-auto mb-4`}>
-                {service.icon}
-              </div>
-              <h3 className={`${styles.serviceTitle} text-xl font-semibold mb-2`}>
-                {service.title}
-              </h3>
-              <p className={`${styles.serviceDescription} text-gray-600`}>
+            <Card
+              key={index}
+              variant="icon"
+              title={service.title}
+              icon={service.icon}
+            >
+              <p className={styles.serviceDescription}>
                 {service.description}
               </p>
-            </div>
+            </Card>
           ))}
         </div>
       </div>

@@ -1,0 +1,92 @@
+@use "../../styles/foundations/response_mixins" as *;
+
+.card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  
+  // Enhanced hover effects and shadows for clickable cards
+  &.clickable {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    }
+  }
+}
+
+.imageContainer {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+  // Only animate image on clickable cards
+  .clickable & {
+    transition: transform 0.3s ease;
+  }
+}
+
+.clickable:hover .cardImage {
+  transform: scale(1.05);
+}
+
+.iconContainer {
+  width: 4rem;
+  height: 4rem;
+  background: var(--color-light-teal);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  
+  svg {
+    width: 2rem;
+    height: 2rem;
+    color: var(--color-bright-green);
+  }
+}
+
+.cardContent {
+  padding: 1.5rem;
+}
+
+.cardTitle {
+  font-family: var(--font-montserrat);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.cardBody {
+  line-height: 1.6;
+  
+  // For icon variant, center the text
+  .icon & {
+    text-align: center;
+  }
+}
+
+// Icon variant specific styles
+.card[data-variant="icon"] .cardContent {
+  text-align: center;
+}
+
+.card[data-variant="icon"] .cardTitle {
+  text-align: center;
+}
