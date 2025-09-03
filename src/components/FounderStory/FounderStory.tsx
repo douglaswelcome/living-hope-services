@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import styles from "./FounderStory.module.scss";
 
@@ -88,10 +89,12 @@ const FounderStory: React.FC<FounderStoryProps> = ({
           
           <div className={styles.imageContainer}>
             <div className={styles.imageWrapper}>
-              <img 
+              <Image 
                 src={imageSrc} 
                 alt={imageAlt}
                 className={styles.founderImage}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>

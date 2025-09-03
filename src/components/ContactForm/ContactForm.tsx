@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 import styles from "./ContactForm.module.scss";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import Button from "../Button/Button";
@@ -72,7 +73,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
           message: result.message || 'Something went wrong. Please try again.' 
         });
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus({ 
         type: 'error', 
         message: 'Network error. Please check your connection and try again.' 
@@ -188,10 +189,12 @@ const ContactForm: React.FC<ContactFormProps> = ({
 
               {/* Image */}
               <div className={styles.imageContainer}>
-                <img
+                <Image
                   src="/images/hero.jpg"
                   alt="Serene outdoor garden and patio area"
                   className={styles.contactImage}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
 

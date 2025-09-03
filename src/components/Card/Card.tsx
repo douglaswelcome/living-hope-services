@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./Card.module.scss";
 
 interface CardProps {
@@ -34,10 +35,12 @@ const Card: React.FC<CardComponentProps> = (props) => {
     <>
       {variant === 'image' && 'imageSrc' in props && (
         <div className={styles.imageContainer}>
-          <img 
+          <Image 
             src={props.imageSrc} 
             alt={props.imageAlt}
             className={styles.cardImage}
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
       )}
