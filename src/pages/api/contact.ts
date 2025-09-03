@@ -65,7 +65,7 @@ export default async function handler(
 
 async function sendEmailNotification(formData: ContactFormData) {
   // Create transporter (you'll need to configure this with your email service)
-  const transporter = nodemailer.createTransporter({
+  const transporter = nodemailer.createTransport({
     service: 'gmail', // or your preferred email service
     auth: {
       user: process.env.EMAIL_USER,

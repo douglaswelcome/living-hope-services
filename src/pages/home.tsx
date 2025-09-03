@@ -2,9 +2,7 @@ import Head from "next/head";
 import { 
   Navigation, 
   HeroSection, 
-  ServicesPreview,
   AddressSection,
-  CallToAction, 
   Footer,
   BackgroundContainer,
   FAQ,
