@@ -33,15 +33,27 @@ const Accreditations: React.FC<AccreditationsProps> = ({
         )}
         
         <div className={styles.accreditationsGrid}>
-            {accreditations.map((accreditation, index) => (
-              <div key={index} className={styles.accreditationItem}>
-                <div className={styles.iconContainer}>
-                  {accreditation.icon}
-                </div>
-                <p className={styles.label}>{accreditation.label}</p>
+          {/* Icons row */}
+          {accreditations.map((accreditation, index) => {
+            // Check if this should be a simple icon (smaller) or detailed logo (bigger)
+            // Simple icons: 501(c)(3) Organization and Licensed & Insured
+            const isSimpleIcon = accreditation.label.includes('501(c)(3)') || 
+                               accreditation.label.includes('Licensed & Insured');
+            
+            return (
+              <div key={`icon-${index}`} className={`${styles.iconContainer} ${isSimpleIcon ? styles.simpleIcon : styles.detailedLogo}`}>
+                {accreditation.icon}
               </div>
-            ))}
-          </div>
+            );
+          })}
+          
+          {/* Labels row */}
+          {accreditations.map((accreditation, index) => (
+            <p key={`label-${index}`} className={styles.label}>
+              {accreditation.label}
+            </p>
+          ))}
+        </div>
         </div>
       </div>
     </div>
