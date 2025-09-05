@@ -106,7 +106,47 @@ $w-sm: 320px; // 320px
     @include column-gap-6;
   }
 
+// Span functions for responsive grid columns
+@mixin span($columns) {
+  grid-column: span $columns;
+  
+  @include breakpoint(w-sm) {
+    grid-column: span 12;
+  }
+}
 
+@mixin span-responsive($desktop, $tablet, $mobile) {
+  grid-column: span $desktop;
+  
+  @include breakpoint(w-med) {
+    grid-column: span $tablet;
+  }
+  
+  @include breakpoint(w-sm) {
+    grid-column: span $mobile;
+  }
+}
+
+// Utility classes for common span patterns
+.span-12 {
+  @include span(12);
+}
+
+.span-6 {
+  @include span-responsive(6, 6, 12);
+}
+
+.span-4 {
+  @include span-responsive(4, 6, 12);
+}
+
+.span-3 {
+  @include span-responsive(3, 6, 12);
+}
+
+.span-2 {
+  @include span-responsive(2, 4, 12);
+}
 
   @mixin small-pad() {
     @include breakpoint(w-sm) {
@@ -133,9 +173,14 @@ $w-sm: 320px; // 320px
   }
 
   .mainBody {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  
+  @include breakpoint(w-sm) {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
+}
 
   .gridWrapper {
     @extend %grid-12;

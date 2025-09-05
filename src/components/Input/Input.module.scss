@@ -13,6 +13,10 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  
+  @include breakpoint(w-sm) {
+    font-size: 0.8rem;
+  }
 }
 
 .requiredIcon {
@@ -40,9 +44,18 @@
     color: var(--color-dark-gray);
     opacity: 0.6;
   }
+  
+  @include breakpoint(w-sm) {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.95rem;
+  }
 }
 
 .textarea {
   min-height: 100px;
   line-height: 1.6;
+  
+  @include breakpoint(w-sm) {
+    min-height: 80px;
+  }
 }

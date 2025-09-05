@@ -1,3 +1,5 @@
+@use "../../styles/foundations/response_mixins" as *;
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -27,6 +29,12 @@
     outline: 2px solid var(--color-green);
     outline-offset: 2px;
   }
+  
+  @include breakpoint(w-sm) {
+    width: 100%;
+    padding: 0.625rem 1.5rem;
+    font-size: 0.95rem;
+  }
 }
 
 .primary {
@@ -53,5 +61,31 @@
   }
   
   &:active:not(:disabled) {
+  }
+}
+
+.icon-only {
+  background-color: var(--color-green);
+  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  &:hover:not(:disabled) {
+    background-color: var(--color-dark-green);
+    transform: translateY(-1px);
+  }
+  
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+  
+  @include breakpoint(w-sm) {
+    width: 2rem;
+    height: 2rem;
   }
 }

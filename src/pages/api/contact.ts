@@ -46,7 +46,7 @@ export default async function handler(
     // Send email notification
     await sendEmailNotification({ firstName, lastName, email, phone, message });
 
-    // Add to Google Sheets (we'll implement this next)
+    // Add to Google Sheets
     await addToGoogleSheets({ firstName, lastName, email, phone, message });
 
     res.status(200).json({ 
@@ -64,18 +64,25 @@ export default async function handler(
 }
 
 async function sendEmailNotification(formData: ContactFormData) {
-  // Create transporter (you'll need to configure this with your email service)
-  const transporter = nodemailer.createTransport({
-    service: 'gmail', // or your preferred email service
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS, // Use app-specific password for Gmail
-    },
-  });
+  try {
+    // Create transporter (you'll need to configure this with your email service)
+    const transporter = nodemailer.createTransport({
+      service: 'gmail', // or your preferred email service
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS, // Use app-specific password for Gmail
+      },
+    });
+
+  // Create recipient list - include both group and personal email
+  const recipients = [
+    process.env.CONTACT_EMAIL || process.env.EMAIL_USER,
+    'douglas@livinghopeservices.org' // Always include your personal email as backup
+  ].filter((email, index, self) => self.indexOf(email) === index); // Remove duplicates
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: process.env.CONTACT_EMAIL || process.env.EMAIL_USER, // Where to send notifications
+    to: recipients.join(', '), // Send to multiple recipients
     subject: `New Contact Form Submission from ${formData.firstName} ${formData.lastName}`,
     html: `
       <h2>New Contact Form Submission</h2>
@@ -89,7 +96,15 @@ async function sendEmailNotification(formData: ContactFormData) {
     `,
   };
 
-  await transporter.sendMail(mailOptions);
+    console.log('Sending email to recipients:', recipients);
+    const result = await transporter.sendMail(mailOptions);
+    console.log('Email sent successfully:', result.messageId);
+    
+  } catch (error) {
+    console.error('Error sending email notification:', error);
+    throw error;
+  }
 }
+
 
 

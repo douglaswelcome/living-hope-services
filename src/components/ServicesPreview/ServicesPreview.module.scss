@@ -2,6 +2,9 @@
 
 .servicesSection {
   // Add any section-specific styles here if needed
+  @include breakpoint(w-sm) {
+    padding: 2rem 0;
+  }
 }
 
 .servicesContainer {
@@ -24,6 +27,10 @@
   @include breakpoint(w-med) {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+  
+  @include breakpoint(w-sm) {
+    gap: 1rem;
   }
 }
 

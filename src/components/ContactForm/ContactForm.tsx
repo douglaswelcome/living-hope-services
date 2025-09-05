@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./ContactForm.module.scss";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import Button from "../Button/Button";
@@ -84,9 +84,8 @@ const ContactForm: React.FC<ContactFormProps> = ({
   };
 
   return (
-    <section className={`${styles.contactSection} ${className}`}>
-      <div className={styles.mainBody}>
-        <div className={styles.content}>
+    <section id="contact" className={`${styles.contactSection} mainBody ${className}`}>
+      <div className={styles.content}>
           <SectionTitle title={title} />
           
           {subtitle && (
@@ -173,11 +172,53 @@ const ContactForm: React.FC<ContactFormProps> = ({
               </form>
             </div>
 
-            {/* Right Column - Testimonial and Image */}
+            {/* Right Column - Contact Information */}
             <div className={styles.infoColumn}>
-              {/* Testimonial Box */}
-              <div className={styles.testimonialBox}>
-                <div className={styles.quoteIcon}>&quot;</div>
+              {/* Contact Information */}
+              <div className={styles.contactInfoBox}>
+                <h3 className={styles.contactInfoTitle}>Get in Touch</h3>
+                <p className={styles.contactInfoSubtitle}>
+                  Ready to start your recovery journey? We&apos;re here to help.
+                </p>
+              </div>
+
+              {/* Phone Number */}
+              <div className={styles.contactItem}>
+                <div className={styles.contactIcon}>
+                  <FontAwesomeIcon icon="phone" style={{ color: 'var(--color-bright-green)' }} />
+                </div>
+                <div className={styles.contactDetails}>
+                  <h4 className={styles.contactLabel}>
+                    <FontAwesomeIcon icon="phone" className={styles.contactLabelIcon} style={{ color: 'var(--color-bright-green)' }} />
+                    Phone
+                  </h4>
+                  <a href="tel:+15551234567" className={styles.contactValue}>
+                    (916) 838-0020
+                  </a>
+                  <p className={styles.contactNote}></p>
+                </div>
+              </div>
+
+              {/* Email Address */}
+              <div className={styles.contactItem}>
+                <div className={styles.contactIcon}>
+                  <FontAwesomeIcon icon="envelope" style={{ color: 'var(--color-bright-green)' }} />
+                </div>
+                <div className={styles.contactDetails}>
+                  <h4 className={styles.contactLabel}>
+                    <FontAwesomeIcon icon="envelope" className={styles.contactLabelIcon} style={{ color: 'var(--color-bright-green)' }} />
+                    Email
+                  </h4>
+                  <a href="mailto:info@livinghopeservices.com" className={styles.contactValue}>
+                    info@livinghopeservices.com
+                  </a>
+                  <p className={styles.contactNote}></p>
+                </div>
+              </div>
+
+              {/* Testimonial Card */}
+              <div className={styles.testimonialCard}>
+                <div className={styles.quoteIcon}>&ldquo;</div>
                 <blockquote className={styles.testimonialText}>
                   I was nervous about reaching out, but the staff responded quickly and compassionately. They made the entire process feel comfortable and respectful from the first contact.
                 </blockquote>
@@ -186,29 +227,9 @@ const ContactForm: React.FC<ContactFormProps> = ({
                   <span className={styles.recoveryTime}>9 months in recovery</span>
                 </div>
               </div>
-
-              {/* Image */}
-              <div className={styles.imageContainer}>
-                <Image
-                  src="/images/hero.jpg"
-                  alt="Serene outdoor garden and patio area"
-                  className={styles.contactImage}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
-
-              {/* Response Time Message */}
-              <div className={styles.responseTimeBox}>
-                <div className={styles.clockIcon}>🕐</div>
-                <p className={styles.responseTimeText}>
-                  We typically respond to all inquiries within 24 hours
-                </p>
-              </div>
             </div>
           </div>
         </div>
-      </div>
     </section>
   );
 };
