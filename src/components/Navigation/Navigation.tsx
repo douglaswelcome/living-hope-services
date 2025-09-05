@@ -26,7 +26,7 @@ const Navigation = () => {
               className={styles.mobileButton}
             >
               <div className={styles.iconWrapper}>
-                <Icon icon={faPhone} color="white" size="sm" style={{ fontSize: '14px' }} />
+                <Icon icon={faPhone} color="white" size="sm" />
               </div>
             </Button>
           </div>

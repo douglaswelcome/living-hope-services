@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./ContactForm.module.scss";
 import SectionTitle from "../SectionTitle/SectionTitle";
@@ -179,7 +178,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
               <div className={styles.contactInfoBox}>
                 <h3 className={styles.contactInfoTitle}>Get in Touch</h3>
                 <p className={styles.contactInfoSubtitle}>
-                  Ready to start your recovery journey? We're here to help.
+                  Ready to start your recovery journey? We&apos;re here to help.
                 </p>
               </div>
 
@@ -219,7 +218,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
 
               {/* Testimonial Card */}
               <div className={styles.testimonialCard}>
-                <div className={styles.quoteIcon}>"</div>
+                <div className={styles.quoteIcon}>&ldquo;</div>
                 <blockquote className={styles.testimonialText}>
                   I was nervous about reaching out, but the staff responded quickly and compassionately. They made the entire process feel comfortable and respectful from the first contact.
                 </blockquote>
