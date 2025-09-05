@@ -1,27 +1,57 @@
 [
   {
-    "id": "house-manager",
-    "question": "Is there a house manager on site?",
-    "answer": "Yes—each home has a dedicated house manager who lives on site and helps lead the daily rhythm of the home."
+    "id": "sober-living-home",
+    "question": "What is a sober living home?",
+    "answer": "A sober living home is a supportive, substance-free environment for individuals recovering from addiction. It provides a safe environment where participants can transition from rehab to independent living while maintaining their sobriety."
   },
   {
-    "id": "religious-program",
-    "question": "Is this a religious program?",
-    "answer": "We are faith-guided, which means we incorporate prayer, devotionals, and biblical counseling into life at Living Hope. You don't need to have it all figured out—we just ask for openness and respect."
+    "id": "eligibility",
+    "question": "Who is eligible to live in your sober living home?",
+    "answer": "Our home is open to individuals (men) who are committed to sobriety and actively participating in recovery. Most participants have completed a treatment program, but this is not always required. We conduct interviews to ensure it's a good fit and to maintain a healthy and supportive community."
   },
   {
-    "id": "insurance",
-    "question": "Do you accept insurance?",
-    "answer": "Living Hope is a private-pay program. We're happy to talk through affordability and what the investment covers."
+    "id": "sobriety-mandatory",
+    "question": "Is sobriety mandatory to stay in the house?",
+    "answer": "Yes. All participants must remain sober. Weekly (as well as random) drug and alcohol testing is conducted to ensure the integrity of the home and the safety of everyone living there."
+  },
+  {
+    "id": "support-services",
+    "question": "What support services do you provide?",
+    "answer": "We offer peer support, access to local recovery meetings, house meetings, life skills coaching, and more. We also engage with local organizations to help meet individual needs, where possible. For example: referrals to counseling, financial assistance, employment resources, etc. Our aim is to help you build a stable, sober lifestyle."
+  },
+  {
+    "id": "length-of-stay",
+    "question": "How long can I stay in the sober living home?",
+    "answer": "Length of stay varies by individual. Some participants stay for a few months, while others may stay a year or more, depending on their recovery goals and personal circumstances."
+  },
+  {
+    "id": "house-rules",
+    "question": "What are the house rules?",
+    "answer": "Rules typically include maintaining sobriety, participating in house chores, attending recovery meetings, respecting curfews, and contributing to a positive community. A full list of rules and expectations is provided upon admission."
+  },
+  {
+    "id": "cost",
+    "question": "How much does it cost to live in the sober living home?",
+    "answer": "Bed fees vary by location and amenities, but typically include utilities and shared living costs. Please contact us directly about current pricing and availability."
   },
   {
     "id": "work-school",
-    "question": "Can I work or attend school during my stay?",
-    "answer": "Absolutely. Many residents hold jobs, attend school, or volunteer in the community during their time here."
+    "question": "Can I work or go to school while living there?",
+    "answer": "Absolutely. We encourage participants to work, attend school, and/or volunteer as part of building a balanced and independent life."
   },
   {
-    "id": "typical-stay",
-    "question": "How long is the typical stay?",
-    "answer": "Stays are typically 3–6 months, but we'll work with you to determine what's best for your next season."
+    "id": "visitors",
+    "question": "Can I have visitors?",
+    "answer": "Visitors are allowed during designated hours and must follow house policies. Overnight guests are not permitted to maintain a safe, recovery-focused environment."
+  },
+  {
+    "id": "apply-information",
+    "question": "How do I apply or get more information?",
+    "answer": "You can request an application through our website, or by contacting us directly by phone/email. We're happy to answer your questions and guide you through the process."
+  },
+  {
+    "id": "house-manager-lead",
+    "question": "Does each home have a house manager/lead for support and accountability?",
+    "answer": "Yes. Each of our SLEs have a house manager and/or house lead who has extended sobriety, has been trained to effectively support our participants, and maintains a healthy and sober environment."
   }
 ]

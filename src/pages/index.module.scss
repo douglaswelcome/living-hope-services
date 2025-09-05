@@ -1,3 +1,5 @@
+@use "../styles/foundations/response_mixins" as *;
+
 .container {
   min-height: 100vh;
   display: flex;
@@ -8,8 +10,8 @@
 }
 
 .content {
-  max-width: 800px;
-  width: 100%;
+  @extend %grid-12;
+  grid-column: span 12;
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
   border-radius: 20px;
@@ -17,6 +19,11 @@
   text-align: center;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  
+  @include breakpoint(w-sm) {
+    padding: 2rem 1rem;
+    width: calc(100% - 2rem);
+  }
 }
 
 .imageContainer {
@@ -24,6 +31,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  grid-column: span 12;
 }
 
 .heroImage {
@@ -32,11 +40,15 @@
   max-width: 100%;
   height: auto;
   
+  @include breakpoint(w-sm) {
+    max-width: 80%;
+  }
 }
 
 .textContent {
   max-width: 600px;
   margin: 0 auto;
+  grid-column: span 12;
 }
 
 .title {
@@ -45,6 +57,10 @@
   font-weight: 700;
   color: var(--color-dark-green);
   line-height: 1.2;
+  
+  @include breakpoint(w-sm) {
+    font-size: 2rem;
+  }
 }
 
 .brandName {
@@ -73,6 +89,11 @@
   font-weight: 600;
   color: var(--color-dark-green);
   opacity: 0.9;
+  
+  @include breakpoint(w-sm) {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .description {
@@ -83,6 +104,11 @@
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
+  
+  @include breakpoint(w-sm) {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .features {
@@ -91,6 +117,11 @@
   gap: 2rem;
   margin: 2rem 0;
   flex-wrap: wrap;
+  
+  @include breakpoint(w-sm) {
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
 }
 
 .feature {
@@ -114,6 +145,11 @@
     color: var(--color-dark-green);
     font-size: 0.9rem;
   }
+  
+  @include breakpoint(w-sm) {
+    min-width: 100px;
+    padding: 0.75rem;
+  }
 }
 
 .featureIcon {
@@ -127,6 +163,11 @@
   background: rgba(76, 196, 148, 0.05);
   border-radius: 12px;
   border-left: 4px solid var(--color-bright-green);
+  
+  @include breakpoint(w-sm) {
+    margin: 1.5rem 0;
+    padding: 1rem;
+  }
 }
 
 .contactText {
@@ -152,6 +193,10 @@
       color: var(--color-bright-green);
     }
   }
+  
+  @include breakpoint(w-sm) {
+    align-items: flex-start;
+  }
 }
 
 .footer {
@@ -164,63 +209,8 @@
     color: var(--color-dark-gray);
     font-size: 0.9rem;
   }
-}
-
-// Responsive design
-@media (max-width: 768px) {
-  .container {
-    padding: 1rem;
-  }
-
-  .content {
-    padding: 2rem 1.5rem;
-  }
-
-  .title {
-    font-size: 2rem;
-  }
-
-  .subtitle {
-    font-size: 1.3rem;
-  }
-
-  .features {
-    gap: 1rem;
-  }
-
-  .feature {
-    min-width: 100px;
-    padding: 0.75rem;
-  }
-
-  .contactDetails {
-    align-items: flex-start;
-  }
-}
-
-@media (max-width: 480px) {
-  .content {
-    padding: 1.5rem 1rem;
-  }
-
-  .title {
-    font-size: 1.8rem;
-  }
-
-  .subtitle {
-    font-size: 1.2rem;
-  }
-
-  .description {
-    font-size: 1rem;
-  }
-
-  .features {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .feature {
-    min-width: 150px;
+  
+  @include breakpoint(w-sm) {
+    margin-top: 1.5rem;
   }
 }

@@ -6,7 +6,7 @@ import Card from "../Card/Card";
 interface AddressCard {
   id: string;
   title: string;
-  address: string;
+  address: string; // City, State format
   imageSrc: string;
   imageAlt: string;
 }
@@ -16,21 +16,21 @@ const AddressSection = () => {
     {
       id: "bessie",
       title: "Bessie House",
-      address: "1657 Bessie Avenue\nTracy, CA 95376",
+      address: "Tracy, California",
       imageSrc: "/images/bessie.jpg",
       imageAlt: "Bessie Avenue House"
     },
     {
       id: "clover",
       title: "Clover House",
-      address: "456 Wellness Way\nTracy, CA 95376",
+      address: "Tracy, California",
       imageSrc: "/images/clover.jpg",
       imageAlt: "Clover Street House"
     },
     {
       id: "manteca",
       title: "Manteca House",
-      address: "789 Support Street\nManteca, CA 90212",
+      address: "Manteca, California",
       imageSrc: "/images/manteca.jpg",
       imageAlt: "Manteca House"
     }
@@ -53,11 +53,7 @@ const AddressSection = () => {
               imageAlt={card.imageAlt}
             >
               <address className={styles.address}>
-                {card.address.split('\n').map((line, index) => (
-                  <span key={index} className={styles.addressLine}>
-                    {line}
-                  </span>
-                ))}
+                {card.address}
               </address>
             </Card>
           ))}

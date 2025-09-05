@@ -2,30 +2,15 @@
 
 .contactSection {
   padding: 4rem 0;
-}
-
-.mainBody {
-  display: flex;
-  justify-content: center;
+  
+  @include breakpoint(w-sm) {
+    padding: 2rem 0;
+  }
 }
 
 .content {
-  width: 100%;
-  max-width: var(--xlg-page-width);
-  
-  @include breakpoint(w-lg) {
-    max-width: var(--lg-page-width);
-  }
-  
-  @include breakpoint(w-med) {
-    max-width: var(--med-page-width);
-  }
-  
-  @include breakpoint(w-sm) {
-    max-width: calc(100% - 2rem);
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
+  @extend %grid-12;
+  grid-column: span 12;
 }
 
 .subtitle {
@@ -48,6 +33,8 @@
 }
 
 .contactContainer {
+  @extend %grid-12;
+  grid-column: span 12;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
@@ -56,6 +43,8 @@
   border-radius: 1rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
   
   @include breakpoint(w-med) {
     grid-template-columns: 1fr;
@@ -68,6 +57,9 @@
   background: white;
   padding: 2rem;
   border-right: 1px solid var(--color-hairline);
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 0; // Allows the column to shrink
   
   @include breakpoint(w-med) {
     border-right: none;
@@ -79,12 +71,14 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  width: 100%;
 }
 
 .nameRow {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  width: 100%;
   
   @include breakpoint(w-sm) {
     grid-template-columns: 1fr;
@@ -125,21 +119,147 @@
 
 
 
-// Right Column - Testimonial and Image
+// Right Column - Contact Information
 .infoColumn {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  background-color: var(--color-light-green);
+  background-color: var(--color-background-subtle);
   padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 0; // Allows the column to shrink
 }
 
-.testimonialBox {
+.contactInfoBox {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contactInfoTitle {
+  font-family: var(--font-montserrat);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-dark-green);
+}
+
+.contactInfoSubtitle {
+  font-family: var(--font-mulish);
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+.contactItem {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+  
+  @include breakpoint(w-sm) {
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
+  }
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.contactIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+  
+  @include breakpoint(w-sm) {
+    display: none; // Hide the large left icon on small screens
+  }
+}
+
+.contactDetails {
+  flex: 1;
+  min-width: 0; // Allows text to wrap properly
+  word-wrap: break-word;
+  
+  @include breakpoint(w-sm) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.contactLabel {
+  font-family: var(--font-montserrat);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--color-dark-green);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  
+  @include breakpoint(w-sm) {
+    justify-content: center;
+  }
+}
+
+.contactLabelIcon {
+  font-size: 1rem;
+  display: none; // Hidden by default (for larger screens)
+  
+  @include breakpoint(w-sm) {
+    display: inline-block; // Show on small screens
+  }
+}
+
+.contactValue {
+  font-family: var(--font-mulish);
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: var(--color-bright-green);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  
+  @include breakpoint(w-sm) {
+    text-align: center;
+    margin-bottom: 0;
+  }
+  
+  &:hover {
+    color: var(--color-dark-green);
+  }
+}
+
+.contactNote {
+  font-family: var(--font-mulish);
+  font-size: 0.875rem;
+  opacity: 0.7;
+  margin: 0;
+}
+
+// Testimonial Card
+.testimonialCard {
   background: white;
   padding: 1.5rem;
   border-radius: 0.75rem;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   position: relative;
+  margin-top: 1rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .quoteIcon {
@@ -152,12 +272,14 @@
 }
 
 .testimonialText {
-  font-family: var(--font-oxygen);
+  font-family: var(--font-mulish);
   font-style: italic;
   font-size: 1rem;
   line-height: 1.6;
   margin: 1rem 0 1rem 0;
   padding-left: 2rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .testimonialAuthor {
@@ -173,48 +295,7 @@
 }
 
 .recoveryTime {
-  font-family: var(--font-oxygen);
+  font-family: var(--font-mulish);
   font-size: 0.875rem;
   opacity: 0.7;
-}
-
-.imageContainer {
-  border-radius: 0.75rem;
-  overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-  position: relative;
-  height: 200px;
-}
-
-.contactImage {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-  
-  &:hover {
-    transform: scale(1.02);
-  }
-}
-
-.responseTimeBox {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 0.75rem;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.clockIcon {
-  font-size: 1.5rem;
-  color: var(--color-bright-green);
-}
-
-.responseTimeText {
-  font-family: var(--font-oxygen);
-  font-size: 0.875rem;
-  line-height: 1.4;
-  margin: 0;
 }

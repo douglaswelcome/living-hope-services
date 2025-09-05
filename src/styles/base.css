@@ -15,8 +15,7 @@
   --color-green: #184C2F;
   --color-dark-green: #093324;
   --color-bright-green: #7CAE80;
-  --color-light-green: #d6e3cc;
-
+  --color-light-green: #e9f4ea;
   
   /* Secondary Colors */
   --color-teal: #60B8BD;
@@ -30,12 +29,12 @@
   
   /* New Background Colors */
   --color-background: #FAFAF5;
-  --color-background-subtle: rgba(12, 200, 103, 0.03);
+  --color-background-subtle:  #d7e6da;
   --color-background-accent: rgba(96, 184, 189, 0.05);
   
   /* Legacy variables */
   --color-brand: var(--color-bright-green);
-  --color-hairline: var(--color-light-green);
+  --color-hairline: #d6e3cc;
   --color-label: var(--color-dark-gray);
   --color-bg1: var(--color-background);
   --color-bg2: var(--color-background-subtle);

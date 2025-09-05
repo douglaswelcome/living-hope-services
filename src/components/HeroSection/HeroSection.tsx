@@ -18,15 +18,9 @@ const HeroSection = () => {
             <div className={`${styles.buttonContainer} flex flex-col sm:flex-row gap-4`}>
               <Button 
                 variant="primary"
-                href="/contact"
+                href="#contact"
               >
                 Contact Us
-              </Button>
-              <Button 
-                variant="secondary"
-                href="/services"
-              >
-                Learn More
               </Button>
             </div>
           </div>

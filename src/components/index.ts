@@ -11,4 +11,7 @@ export { default as Accreditations } from './Accreditations/Accreditations';
 export { default as ContactForm } from './ContactForm/ContactForm';
 export { default as Input } from './Input/Input';
 export { default as FounderStory } from './FounderStory/FounderStory';
-export { BackgroundContainer } from './BackgroundContainer/BackgroundContainer'; 
+export { BackgroundContainer } from './BackgroundContainer/BackgroundContainer';
+export { default as CCAPPIcon } from './CCAPPIcon/CCAPPIcon';
+export { default as SBLIcon } from './SBLIcon/SBLIcon';
+export { Icon } from './Icon'; 

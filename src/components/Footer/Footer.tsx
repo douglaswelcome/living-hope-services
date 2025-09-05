@@ -21,9 +21,9 @@ const Footer = () => {
           <div className={`${styles.footerSection} ${styles.contactSection}`}>
             <h5 className={`${styles.footerSubtitle} mb-4`}>Contact</h5>
             <ul className={`${styles.footerList} space-y-2`}>
-              <li>123 Recovery Way, Manteca, CA 95336</li>
+              <li>1657 Bessie Ave, Tracy, CA 95376</li>
               <li>(555) 123-4567</li>
-              <li>hello.livinghopeservices@gmail.com</li>
+              <li>info@livinghopeservices.org</li>
             </ul>
           </div>
         </div>

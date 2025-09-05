@@ -4,7 +4,7 @@ import styles from "./Button.module.scss";
 
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary' | 'icon-only';
   href?: string;
   onClick?: () => void;
   className?: string;

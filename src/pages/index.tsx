@@ -29,8 +29,6 @@ export default function Home() {
           </div>
 
           <div className={styles.textContent}>
-            
-            
             <h2 className={`${styles.subtitle} headline-lg-thin`}>Website Coming Soon</h2>
             
             <p className={`${styles.description} body-lg`}>
@@ -44,9 +42,7 @@ export default function Home() {
                 For immediate assistance, please contact us:
               </p>
               <div className={styles.contactDetails}>
-                {/* <p className="body-md">📞 Phone: (555) 123-4567</p> */}
                 <p>Email: hello.livinghopeservices@gmail.com</p>
-
               </div>
             </div>
 

@@ -8,7 +8,9 @@ import {
   FAQ,
   Accreditations,
   ContactForm,
-  FounderStory
+  FounderStory,
+  CCAPPIcon,
+  SBLIcon
 } from "../components";
 
 export default function Home() {
@@ -16,35 +18,31 @@ export default function Home() {
   const accreditations = [
     {
       icon: (
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" />
+        <svg viewBox="0 0 120 120" fill="currentColor" width="120" height="120">
+          <path d="M60 10L65.45 41.3L100 45L65.45 48.7L60 80L54.55 48.7L20 45L54.55 41.3L60 10Z" />
         </svg>
       ),
-      label: "BBB Accredited"
+      label: "501(c)(3) Organization"
     },
     {
       icon: (
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" />
-        </svg>
+        <SBLIcon width={120} height={120} color="currentColor" />
       ),
-      label: "State Licensed"
+      label: "Sober Living Network Member"
     },
     {
       icon: (
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2L15.09 8.26L22 9L16.91 13.74L18.18 20.02L12 17.77L5.82 20.02L7.09 13.74L2 9L8.91 8.26L12 2Z" />
-        </svg>
+        <CCAPPIcon width={120} height={120} color="currentColor" />
       ),
-      label: "Industry Certified"
+      label: "CCAPP Credentialing - RADT"
     },
     {
       icon: (
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M9 12L11 14L15 10M7.835 4.697C8.287 4.257 8.887 4 9.5 4C10.113 4 10.713 4.257 11.165 4.697L12 5.5L12.835 4.697C13.287 4.257 13.887 4 14.5 4C15.113 4 15.713 4.257 16.165 4.697L17 5.5L17.835 4.697C18.287 4.257 18.887 4 19.5 4C20.113 4 20.713 4.257 21.165 4.697L22 5.5V19C22 20.1046 21.1046 21 20 21H4C2.89543 21 2 20.1046 2 19V5.5L2.835 4.697C3.287 4.257 3.887 4 4.5 4C5.113 4 5.713 4.257 6.165 4.697L7 5.5L7.835 4.697Z" />
+        <svg viewBox="0 0 120 120" fill="currentColor" width="120" height="120">
+          <path d="M45 60L55 70L75 50M39.175 23.485C41.435 21.285 44.435 20 47.5 20C50.565 20 53.565 21.285 55.825 23.485L60 27.5L64.175 23.485C66.435 21.285 69.435 20 72.5 20C75.565 20 78.565 21.285 80.825 23.485L85 27.5L89.175 23.485C91.435 21.285 94.435 20 97.5 20C100.565 20 103.565 21.285 105.825 23.485L110 27.5V95C110 100.523 105.523 105 100 105H20C14.477 105 10 100.523 10 95V27.5L14.175 23.485C16.435 21.285 19.435 20 22.5 20C25.565 20 28.565 21.285 30.825 23.485L35 27.5L39.175 23.485Z" />
         </svg>
       ),
-      label: "Government Approved"
+      label: "Licensed & Insured"
     }
   ];
 
@@ -68,9 +66,9 @@ export default function Home() {
           title="Our Story"
           subtitle="A Journey of Hope and Recovery"
           story={[
-            "Living Hope Services began with a simple conversation on the way to a church volunteer event. Brett Cardoza, a pastor, and Louis Grego, a recovering addict, shared their stories. Louis opened up about his recovery journey, how difficult it was to walk the path alone, and how finding community through his church and sober living home gave him strength, accountability, and hope.",
-            "He shared that if he ever had the chance, he would walk alongside other men in recovery, offering the kind of support and brotherhood he wished he had earlier. With a foundation built on faith, a commitment to personal mentorship, and a heart for serving others, Louis saw what worked and wanted to help replicate it for others.",
-            "Brett listened, inspired by Louis's vision and courage, and recognized the opportunity to join him in building something lasting. Together, they founded Living Hope Services, a place where men can find not only housing but also a supportive network, spiritual guidance, and a pathway toward lasting recovery and stability."
+            "Living Hope Services began with a simple conversation on the way to a church volunteer event. Brett, a pastor, and Louis, a recovering addict, shared their stories. Louis opened up about his recovery journey, how difficult it was to walk the path alone, and how finding community through his church and sober living home gave him strength, accountability, and hope.",
+            "He shared that if he ever had the chance, he would walk alongside other men in recovery, offering the kind of support and brotherhood he wished he had earlier. With a commitment to personal mentorship and a heart for serving others, Louis saw what worked and wanted to help replicate it for others.",
+            "Brett listened, inspired by Louis's vision and courage, and recognized the opportunity to join him in building something lasting. Together, they founded Living Hope Services, a place where men can find not only safe housing, but also a supportive network and a pathway toward lasting recovery and stability."
           ]}
           imageSrc="/images/founder.jpg"
           imageAlt="Founder of Living Hope Services"

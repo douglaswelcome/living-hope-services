@@ -22,7 +22,7 @@ const Accreditations: React.FC<AccreditationsProps> = ({
 }) => {
   return (
     <div className={`${styles.accreditations} ${className}`}>
-      <div className={styles.mainBody}>
+      <div className="mainBody">
         <div className={styles.content}>
                   <SectionTitle title={title} />
         
