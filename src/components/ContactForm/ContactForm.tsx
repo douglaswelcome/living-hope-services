@@ -193,7 +193,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                     Phone
                   </h4>
                   <a href="tel:+15551234567" className={styles.contactValue}>
-                    (555) 123-4567
+                    (916) 838-0020
                   </a>
                   <p className={styles.contactNote}></p>
                 </div>

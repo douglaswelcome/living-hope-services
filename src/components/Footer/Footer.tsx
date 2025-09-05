@@ -22,7 +22,7 @@ const Footer = () => {
             <h5 className={`${styles.footerSubtitle} mb-4`}>Contact</h5>
             <ul className={`${styles.footerList} space-y-2`}>
               <li>1657 Bessie Ave, Tracy, CA 95376</li>
-              <li>(555) 123-4567</li>
+              <li>(916) 838-0020</li>
               <li>info@livinghopeservices.org</li>
             </ul>
           </div>
