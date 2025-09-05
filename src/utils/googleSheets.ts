@@ -10,13 +10,16 @@ interface ContactFormData {
 
 export async function addToGoogleSheets(formData: ContactFormData) {
   try {
-    // Initialize Google Sheets API
-    const auth = new google.auth.GoogleAuth({
-      credentials: {
-        client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-        private_key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
-      },
-      scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+    // Initialize Google Sheets API with OAuth 2.0
+    const auth = new google.auth.OAuth2(
+      process.env.GOOGLE_CLIENT_ID,
+      process.env.GOOGLE_CLIENT_SECRET,
+      process.env.GOOGLE_REDIRECT_URI
+    );
+
+    // Set the refresh token
+    auth.setCredentials({
+      refresh_token: process.env.GOOGLE_REFRESH_TOKEN,
     });
 
     const sheets = google.sheets({ version: 'v4', auth });

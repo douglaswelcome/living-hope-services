@@ -76,7 +76,12 @@
     max-height: 10rem;
     min-width: 3rem;
     min-height: 3rem;
-    color: var(--color-bright-green);
+    color: var(--color-bright-green) !important;
+    fill: var(--color-bright-green) !important;
+    
+    path {
+      fill: var(--color-bright-green) !important;
+    }
   }
   
   @include breakpoint(w-sm) {
@@ -92,6 +97,12 @@
       max-height: 10rem;
       min-width: 4rem;
       min-height: 4rem;
+      color: var(--color-bright-green) !important;
+      fill: var(--color-bright-green) !important;
+      
+      path {
+        fill: var(--color-bright-green) !important;
+      }
     }
   }
 }
