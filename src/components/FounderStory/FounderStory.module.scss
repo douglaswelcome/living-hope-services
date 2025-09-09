@@ -37,14 +37,8 @@
 .gradientBackground {
   grid-column: 1 / 11;
   grid-row: 2;
-  background: linear-gradient(
-    90deg,
-    rgba(24, 76, 47, 0.9) 0%,
-    rgba(24, 76, 47, 0.7) 0%,
-    rgba(24, 76, 47, 0.6) 60%,
-    transparent 100%
-  );
-  z-index: 1;
+  background: linear-gradient(90deg, rgba(24, 76, 47, 1) 0%, rgba(24, 76, 47, .9) 0%, rgba(24, 76, 47, 0.7) 50%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
   
   @include breakpoint(w-med) {
     grid-column: 1 / -1;
@@ -135,7 +129,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: right center;
 }
 
 
