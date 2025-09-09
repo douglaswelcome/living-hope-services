@@ -97,6 +97,11 @@ const ContactForm: React.FC<ContactFormProps> = ({
           <div className={styles.contactContainer}>
             {/* Left Column - Contact Form */}
             <div className={styles.formColumn}>
+              {/* Form Header */}
+              <div className={styles.formInfoBox}>
+                <h3 className={styles.formInfoTitle}>Get More Info</h3>
+              </div>
+              
               <form onSubmit={handleSubmit} className={styles.contactForm}>
                 <div className={styles.nameRow}>
                   <Input
@@ -176,10 +181,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
             <div className={styles.infoColumn}>
               {/* Contact Information */}
               <div className={styles.contactInfoBox}>
-                <h3 className={styles.contactInfoTitle}>Get in Touch</h3>
-                <p className={styles.contactInfoSubtitle}>
-                  Ready to start your recovery journey? We&apos;re here to help.
-                </p>
+                <h3 className={styles.contactInfoTitle}>Contact Us</h3>
               </div>
 
               {/* Phone Number */}

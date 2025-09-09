@@ -67,7 +67,7 @@ export default function Home() {
 
         <FounderStory 
           title="Our Story"
-          subtitle="A Journey of Hope and Recovery"
+          subtitle="A Story of Hope and Recovery"
           story={[
             "Living Hope Services began with a simple conversation on the way to a church volunteer event. Brett, a pastor, and Louis, a recovering addict, shared their stories. Louis opened up about his recovery journey, how difficult it was to walk the path alone, and how finding community through his church and sober living home gave him strength, accountability, and hope.",
             "He shared that if he ever had the chance, he would walk alongside other men in recovery, offering the kind of support and brotherhood he wished he had earlier. With a commitment to personal mentorship and a heart for serving others, Louis saw what worked and wanted to help replicate it for others.",
@@ -82,7 +82,10 @@ export default function Home() {
           accreditations={accreditations} 
         />
         <FAQ />
-        <ContactForm />
+        <ContactForm 
+          title="Contact Our Team"
+          subtitle="Ready to start your recovery journey? We're here to help."
+        />
         <Footer />
       </div>
 
