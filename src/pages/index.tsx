@@ -28,28 +28,28 @@ export default function Home() {
       ),
       label: "501(c)(3) Organization"
     },
-    {
-      // Temporarily using Font Awesome house icon instead of SBLIcon
-      // <SBLIcon width={120} height={120} color="currentColor" />
-      icon: (
-        <FontAwesomeIcon 
-          icon={["far", "house"]} 
-          style={{ fontSize: '120px', color: 'currentColor' }}
-        />
-      ),
-      label: "Sober Living Network Member"
-    },
-    {
-      // Temporarily using Font Awesome handshake icon instead of CCAPPIcon
-      // <CCAPPIcon width={120} height={120} color="currentColor" />
-      icon: (
-        <FontAwesomeIcon 
-          icon={["far", "handshake"]} 
-          style={{ fontSize: '120px', color: 'currentColor' }}
-        />
-      ),
-      label: "CCAPP Credentialing - RADT"
-    },
+    // {
+    //   // Temporarily using Font Awesome house icon instead of SBLIcon
+    //   // <SBLIcon width={120} height={120} color="currentColor" />
+    //   icon: (
+    //     <FontAwesomeIcon 
+    //       icon={["far", "house"]} 
+    //       style={{ fontSize: '120px', color: 'currentColor' }}
+    //     />
+    //   ),
+    //   label: "Sober Living Network Member"
+    // },
+    // {
+    //   // Temporarily using Font Awesome handshake icon instead of CCAPPIcon
+    //   // <CCAPPIcon width={120} height={120} color="currentColor" />
+    //   icon: (
+    //     <FontAwesomeIcon 
+    //       icon={["far", "handshake"]} 
+    //       style={{ fontSize: '120px', color: 'currentColor' }}
+    //     />
+    //   ),
+    //   label: "CCAPP Credentialing - RADT"
+    // },
     {
       icon: (
         <FontAwesomeIcon 
