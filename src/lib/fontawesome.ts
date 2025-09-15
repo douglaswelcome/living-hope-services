@@ -31,7 +31,9 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { 
   faHeart as faHeartRegular,
-  faCircleCheck as faCircleCheckRegular
+  faCircleCheck as faCircleCheckRegular,
+  faHouse as faHouseRegular,
+  faHandshake as faHandshakeRegular
 } from '@fortawesome/free-regular-svg-icons';
 
 // Add icons to the library
@@ -65,5 +67,7 @@ library.add(
   faShield,
   faCheck,
   faHeartRegular,
-  faCircleCheckRegular
+  faCircleCheckRegular,
+  faHouseRegular,
+  faHandshakeRegular
 );

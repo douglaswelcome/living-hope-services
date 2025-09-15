@@ -211,8 +211,8 @@ const ContactForm: React.FC<ContactFormProps> = ({
                     <FontAwesomeIcon icon="envelope" className={styles.contactLabelIcon} style={{ color: 'var(--color-bright-green)' }} />
                     Email
                   </h4>
-                  <a href="mailto:info@livinghopeservices.com" className={styles.contactValue}>
-                    info@livinghopeservices.com
+                  <a href="mailto:info@livinghopeservices.org" className={styles.contactValue}>
+                    info@livinghopeservices.org
                   </a>
                   <p className={styles.contactNote}></p>
                 </div>

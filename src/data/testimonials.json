@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "quote": "I found the strength I never knew I had within the supportive community at Living Hope Services.",
+    "emphasizedWord": "strength",
+    "name": "Michael T.",
+    "recoveryTime": "2 years in recovery",
+    "headshotSrc": "/images/founder.jpg",
+    "headshotAlt": "Michael T. - Testimonial"
+  },
+  {
+    "id": 2,
+    "quote": "The accountability and brotherhood I found here gave me the hope I needed to rebuild my life.",
+    "emphasizedWord": "hope",
+    "name": "David R.",
+    "recoveryTime": "18 months in recovery",
+    "headshotSrc": "/images/founder.jpg",
+    "headshotAlt": "David R. - Testimonial"
+  },
+  {
+    "id": 3,
+    "quote": "Living Hope Services didn't just provide housing - they gave me a family and a future I could believe in.",
+    "emphasizedWord": "family",
+    "name": "James M.",
+    "recoveryTime": "3 years in recovery",
+    "headshotSrc": "/images/founder.jpg",
+    "headshotAlt": "James M. - Testimonial"
+  }
+]

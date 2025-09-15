@@ -10,8 +10,10 @@ import {
   Accreditations,
   ContactForm,
   FounderStory,
-  CCAPPIcon,
-  SBLIcon
+  // CCAPPIcon, // Temporarily commented out - using Font Awesome handshake icon
+  // SBLIcon, // Temporarily commented out - using Font Awesome house icon
+  Testimonial,
+  WhatWeDo
 } from "../components";
 
 export default function Home() {
@@ -27,14 +29,24 @@ export default function Home() {
       label: "501(c)(3) Organization"
     },
     {
+      // Temporarily using Font Awesome house icon instead of SBLIcon
+      // <SBLIcon width={120} height={120} color="currentColor" />
       icon: (
-        <SBLIcon width={120} height={120} color="currentColor" />
+        <FontAwesomeIcon 
+          icon={["far", "house"]} 
+          style={{ fontSize: '120px', color: 'currentColor' }}
+        />
       ),
       label: "Sober Living Network Member"
     },
     {
+      // Temporarily using Font Awesome handshake icon instead of CCAPPIcon
+      // <CCAPPIcon width={120} height={120} color="currentColor" />
       icon: (
-        <CCAPPIcon width={120} height={120} color="currentColor" />
+        <FontAwesomeIcon 
+          icon={["far", "handshake"]} 
+          style={{ fontSize: '120px', color: 'currentColor' }}
+        />
       ),
       label: "CCAPP Credentialing - RADT"
     },
@@ -62,6 +74,7 @@ export default function Home() {
       <div className="min-h-screen">
         <Navigation />
         <HeroSection />
+        <WhatWeDo />
         <AddressSection /> 
   
 
@@ -76,6 +89,10 @@ export default function Home() {
           imageSrc="/images/founder.jpg"
           imageAlt="Founder of Living Hope Services"
         />
+        
+        {/* Testimonial Example */}
+        {/* <Testimonial id={1} /> */}
+        
               <Accreditations 
           title="Our Accreditations"
           subtitle="We maintain the highest standards of care and professionalism, backed by industry recognition and government approval."

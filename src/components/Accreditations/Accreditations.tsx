@@ -36,9 +36,11 @@ const Accreditations: React.FC<AccreditationsProps> = ({
           {/* Icons row */}
           {accreditations.map((accreditation, index) => {
             // Check if this should be a simple icon (smaller) or detailed logo (bigger)
-            // Simple icons: 501(c)(3) Organization and Licensed & Insured
+            // Simple icons: 501(c)(3) Organization, Licensed & Insured, and Font Awesome icons
             const isSimpleIcon = accreditation.label.includes('501(c)(3)') || 
-                               accreditation.label.includes('Licensed & Insured');
+                               accreditation.label.includes('Licensed & Insured') ||
+                               accreditation.label.includes('Sober Living Network Member') ||
+                               accreditation.label.includes('CCAPP Credentialing');
             
             return (
               <div key={`icon-${index}`} className={`${styles.iconContainer} ${isSimpleIcon ? styles.simpleIcon : styles.detailedLogo}`}>
