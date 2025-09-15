@@ -36,23 +36,28 @@
   @extend %grid-12;
   grid-column: span 12;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto auto;
-  gap: 2rem 2rem; // horizontal gap, vertical gap
+  gap: 2rem 4rem; // horizontal gap, vertical gap
   row-gap: 1rem; // Override vertical gap to 1rem
   align-items: center;
   justify-items: center;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
   
   @include breakpoint(w-med) {
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem 3rem; // horizontal gap, vertical gap
     row-gap: 1rem; // Override vertical gap to 1rem
+    max-width: 500px;
   }
   
   @include breakpoint(w-sm) {
     grid-template-columns: 1fr;
     gap: 2rem 2rem; // horizontal gap, vertical gap
     row-gap: 1rem; // Override vertical gap to 1rem
+    max-width: 300px;
   }
 }
 
@@ -66,26 +71,20 @@
   min-height: 4.5rem;
   grid-row: 1; // Icons in first row
   
-  // Desktop: 4 columns
+  // Desktop: 2 columns
   &:nth-child(1) { grid-column: 1; }
   &:nth-child(2) { grid-column: 2; }
-  &:nth-child(3) { grid-column: 3; }
-  &:nth-child(4) { grid-column: 4; }
   
-  // Tablet: 2x2 layout
+  // Tablet: 2 columns
   @include breakpoint(w-med) {
     &:nth-child(1) { grid-column: 1; }
     &:nth-child(2) { grid-column: 2; }
-    &:nth-child(3) { grid-column: 1; grid-row: 3; }
-    &:nth-child(4) { grid-column: 2; grid-row: 3; }
   }
   
   // Mobile: single column
   @include breakpoint(w-sm) {
     &:nth-child(1) { grid-column: 1; grid-row: 1; }
     &:nth-child(2) { grid-column: 1; grid-row: 3; }
-    &:nth-child(3) { grid-column: 1; grid-row: 5; }
-    &:nth-child(4) { grid-column: 1; grid-row: 7; }
   }
   
   svg {
@@ -170,26 +169,20 @@
   margin: 0;
   grid-row: 2; // Labels in second row
   
-  // Desktop: 4 columns
-  &:nth-child(5) { grid-column: 1; } // First label (after 4 icons)
-  &:nth-child(6) { grid-column: 2; } // Second label
-  &:nth-child(7) { grid-column: 3; } // Third label
-  &:nth-child(8) { grid-column: 4; } // Fourth label
+  // Desktop: 2 columns
+  &:nth-child(3) { grid-column: 1; } // First label (after 2 icons)
+  &:nth-child(4) { grid-column: 2; } // Second label
   
-  // Tablet: 2x2 layout
+  // Tablet: 2 columns
   @include breakpoint(w-med) {
-    &:nth-child(5) { grid-column: 1; grid-row: 2; margin-bottom: 1.5rem; } // First label
-    &:nth-child(6) { grid-column: 2; grid-row: 2; margin-bottom: 1.5rem; } // Second label
-    &:nth-child(7) { grid-column: 1; grid-row: 4; } // Third label
-    &:nth-child(8) { grid-column: 2; grid-row: 4; } // Fourth label
+    &:nth-child(3) { grid-column: 1; grid-row: 2; margin-bottom: 1.5rem; } // First label
+    &:nth-child(4) { grid-column: 2; grid-row: 2; margin-bottom: 1.5rem; } // Second label
   }
   
   // Mobile: single column
   @include breakpoint(w-sm) {
-    &:nth-child(5) { grid-column: 1; grid-row: 2; margin-bottom: 1.5rem; } // First label
-    &:nth-child(6) { grid-column: 1; grid-row: 4; margin-bottom: 1.5rem; } // Second label
-    &:nth-child(7) { grid-column: 1; grid-row: 6; margin-bottom: 1.5rem; } // Third label
-    &:nth-child(8) { grid-column: 1; grid-row: 8; } // Fourth label
+    &:nth-child(3) { grid-column: 1; grid-row: 2; margin-bottom: 1.5rem; } // First label
+    &:nth-child(4) { grid-column: 1; grid-row: 4; } // Second label
   }
   
   @include breakpoint(w-sm) {
