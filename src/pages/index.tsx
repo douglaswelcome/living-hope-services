@@ -74,7 +74,7 @@ export default function Home() {
       <div className="min-h-screen">
         <Navigation />
         <HeroSection />
-        <WhatWeDo />
+        {/* <WhatWeDo /> */}
         <AddressSection /> 
   
 
