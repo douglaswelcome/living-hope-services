@@ -9,19 +9,19 @@ export const useSectionBasedLogo = (options: UseSectionBasedLogoOptions = {}) =>
   const [isDarkBackground, setIsDarkBackground] = useState(false);
 
   // Throttle function to limit how often we check background
-  const throttle = useCallback((func: Function, delay: number) => {
+  const throttle = useCallback(<T extends (...args: never[]) => void>(func: T, delay: number) => {
     let timeoutId: NodeJS.Timeout;
     let lastExecTime = 0;
-    return function (...args: any[]) {
+    return function (...args: Parameters<T>) {
       const currentTime = Date.now();
       
       if (currentTime - lastExecTime > delay) {
-        func.apply(this, args);
+        func(...args);
         lastExecTime = currentTime;
       } else {
         clearTimeout(timeoutId);
         timeoutId = setTimeout(() => {
-          func.apply(this, args);
+          func(...args);
           lastExecTime = Date.now();
         }, delay - (currentTime - lastExecTime));
       }
@@ -102,10 +102,9 @@ export const useSectionBasedLogo = (options: UseSectionBasedLogoOptions = {}) =>
   }, []);
 
   // Throttled version of checkBackgroundContent
-  const throttledCheckBackground = useCallback(
-    throttle(checkBackgroundContent, debounceMs),
-    [checkBackgroundContent, throttle, debounceMs]
-  );
+  const throttledCheckBackground = useCallback(() => {
+    return throttle(checkBackgroundContent, debounceMs)();
+  }, [checkBackgroundContent, throttle, debounceMs]);
 
   useEffect(() => {
     // Initial check
@@ -120,7 +119,7 @@ export const useSectionBasedLogo = (options: UseSectionBasedLogoOptions = {}) =>
       window.removeEventListener('scroll', throttledCheckBackground);
       window.removeEventListener('resize', throttledCheckBackground);
     };
-  }, [throttledCheckBackground]);
+  }, [checkBackgroundContent, throttledCheckBackground]);
 
   return {
     isDarkBackground,
