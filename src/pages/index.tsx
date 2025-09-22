@@ -12,8 +12,8 @@ import {
   FounderStory,
   // CCAPPIcon, // Temporarily commented out - using Font Awesome handshake icon
   // SBLIcon, // Temporarily commented out - using Font Awesome house icon
-  Testimonial,
-  WhatWeDo
+  // Testimonial,
+  // WhatWeDo
 } from "../components";
 
 export default function Home() {
@@ -76,7 +76,6 @@ export default function Home() {
         <HeroSection />
         {/* <WhatWeDo /> */}
         <AddressSection /> 
-  
 
         <FounderStory 
           title="Our Story"
@@ -93,7 +92,7 @@ export default function Home() {
         {/* Testimonial Example */}
         {/* <Testimonial id={1} /> */}
         
-              <Accreditations 
+        <Accreditations 
           title="Our Accreditations"
           subtitle="We maintain the highest standards of care and professionalism, backed by industry recognition and government approval."
           accreditations={accreditations} 

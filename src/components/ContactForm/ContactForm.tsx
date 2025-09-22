@@ -194,8 +194,8 @@ const ContactForm: React.FC<ContactFormProps> = ({
                     <FontAwesomeIcon icon="phone" className={styles.contactLabelIcon} style={{ color: 'var(--color-bright-green)' }} />
                     Phone
                   </h4>
-                  <a href="tel:+19168380020" className={styles.contactValue}>
-                    (916) 838-0020
+                  <a href="tel:+12098312990" className={styles.contactValue}>
+                    (209) 831-2990
                   </a>
                   <p className={styles.contactNote}></p>
                 </div>

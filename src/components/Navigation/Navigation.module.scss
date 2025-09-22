@@ -41,6 +41,46 @@
   }
 }
 
+.logoGreen {
+  color: var(--color-green);
+  transition: color 0.6s ease-in-out, opacity 0.6s ease-in-out;
+  opacity: 1;
+  
+  &:hover {
+    color: var(--color-bright-green);
+  }
+  
+  svg path {
+    fill: var(--color-green);
+    transition: fill 0.6s ease-in-out, opacity 0.6s ease-in-out;
+  }
+  
+  &:hover svg path {
+    fill: var(--color-bright-green);
+  }
+}
+
+.logoWhite {
+  color: white;
+  transition: color 0.6s ease-in-out, opacity 0.6s ease-in-out;
+  opacity: 1;
+  
+  &:hover {
+    color: #f0f0f0;
+  }
+  
+  svg path {
+    fill: white;
+    transition: fill 0.6s ease-in-out, opacity 0.6s ease-in-out;
+  }
+  
+  &:hover svg path {
+    fill: #f0f0f0;
+  }
+}
+
+// Smooth transitions are handled by the logoGreen and logoWhite classes above
+
 .navLinks {
   display: flex;
   align-items: center;

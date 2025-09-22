@@ -2,15 +2,22 @@ import Logo from "../Logo/Logo";
 import Button from "../Button/Button";
 import { Icon } from "../Icon";
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { useSectionBasedLogo } from "../../hooks/useSectionBasedLogo";
 import styles from "./Navigation.module.scss";
 
 const Navigation = () => {
+  const { logoColor, isDarkBackground } = useSectionBasedLogo();
+
   return (
-    <nav className={`${styles.navigation} mainBody`} aria-label="Main navigation">
+    <nav className={`${styles.navigation} mainBody`} aria-label="Main navigation" data-nav="main">
       <div className={styles.navigationContainer}>
         <div className={styles.navigationContent}>
           <div className={styles.logoContainer}>
-            <Logo variant="text" className="h-8 w-auto" color="var(--color-green)" />
+            <Logo 
+              variant="text" 
+              className={`h-8 w-auto ${isDarkBackground ? styles.logoWhite : styles.logoGreen}`} 
+              color={logoColor} 
+            />
           </div>
           <div className={styles.contactButton}>
             <Button 
