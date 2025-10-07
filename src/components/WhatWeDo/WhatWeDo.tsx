@@ -20,7 +20,7 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
         <div className={styles.contentCard}>
           <div className={styles.backgroundImage}>
             <Image
-              src="/images/bessie.jpg"
+              src="/images/jungle.jpeg"
               alt="Bessie House - A place of hope and recovery"
               fill
               sizes="(max-width: 768px) 100vw, 80vw"
@@ -31,7 +31,9 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
           
           <div className={styles.content}>
             <div className={styles.textContent}>
-              <h2 className={styles.heading}>Comprehensive Recovery Services</h2>
+              <h2 className={styles.heading}>
+                A Place to <span className="hero-highlight">Thrive</span>
+              </h2>
               <p className={styles.description}>
                 At Living Hope Services, we provide a comprehensive approach to addiction recovery 
                 that goes beyond traditional treatment. Our mission is to create a supportive 

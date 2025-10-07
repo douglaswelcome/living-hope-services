@@ -13,7 +13,7 @@ import {
   // CCAPPIcon, // Temporarily commented out - using Font Awesome handshake icon
   // SBLIcon, // Temporarily commented out - using Font Awesome house icon
   // Testimonial,
-  // WhatWeDo
+  WhatWeDo
 } from "../components";
 
 export default function Home() {
@@ -74,7 +74,7 @@ export default function Home() {
       <div className="min-h-screen">
         <Navigation />
         <HeroSection />
-        {/* <WhatWeDo /> */}
+         <WhatWeDo /> 
         <AddressSection /> 
 
         <FounderStory 

@@ -14,9 +14,10 @@ const HeroSection = () => {
               <span className="hero-highlight"> Recovery</span>
             </h1>
             <p className={`${styles.subtitle} mb-8 max-w-3xl`}>
-            Living Hope Services operates men&apos;s homes that are more than just housing. Our faith-based program provides a clean, structured, and supportive environment where men can heal in recovery and find resources for lasting stability and hope.            </p>
+              Living Hope Services offers safe and structured sober living environments where men find strength and stability to thrive.
+            </p>
             <div className={`${styles.buttonContainer} flex flex-col sm:flex-row gap-4`}>
-              <Button 
+              <Button
                 variant="primary"
                 href="#contact"
               >
@@ -26,8 +27,8 @@ const HeroSection = () => {
           </div>
           <div className={styles.imageColumn}>
             <div className={styles.imageContainer}>
-              <Image 
-                src="/images/hero.jpg" 
+              <Image
+                src="/images/hero.jpg"
                 alt="Peaceful garden and recovery environment at Living Hope Services"
                 className={styles.heroImage}
                 fill
