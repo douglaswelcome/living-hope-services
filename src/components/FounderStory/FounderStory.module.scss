@@ -37,7 +37,8 @@
 .gradientBackground {
   grid-column: 1 / 11;
   grid-row: 2;
-  background: linear-gradient(90deg, rgba(24, 76, 47, 1) 0%, rgba(24, 76, 47, .9) 0%, rgba(24, 76, 47, 0.7) 50%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(90deg, rgba(24, 76, 47, 0.75) 0%, rgba(24, 76, 47, 0.7) 20%, rgba(24, 76, 47, 0.6) 50%, rgba(0, 0, 0, 0) 100%);
+  mix-blend-mode: multiply;
   z-index: 1;
   
   @include breakpoint(w-med) {

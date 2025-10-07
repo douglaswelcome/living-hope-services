@@ -3,7 +3,7 @@
 
 .whatWeDo {
   padding: 4rem 0;
-  background: var(--color-background);
+
   
   @include breakpoint(w-sm) {
     padding: 2rem 0;
@@ -67,10 +67,11 @@
   bottom: 0;
   background: linear-gradient(
     135deg,
-    rgba(24, 76, 47, 0.85) 0%, // --color-green with 85% opacity
-    rgba(9, 51, 36, 0.9) 50%,  // --color-dark-green with 90% opacity
-    rgba(24, 76, 47, 0.85) 100% // --color-green with 85% opacity
+    rgba(24, 76, 47, 0.525) 0%, // --color-green with 52.5% opacity
+    rgba(9, 51, 36, 0.625) 50%,  // --color-dark-green with 62.5% opacity
+    rgba(24, 76, 47, 0.525) 100% // --color-green with 52.5% opacity
   );
+  mix-blend-mode: multiply;
   z-index: 2;
 }
 
@@ -88,23 +89,28 @@
 }
 
 .textContent {
-  max-width: 600px;
+  text-align: center;
   color: var(--color-white);
 }
 
 .heading {
-  font-family: var(--font-playfair);
+  font-family: var(--font-montserrat);
   font-size: 2.5rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 1.5rem;
-  color: var(--color-white);
+  margin: 0 0 1.5rem 0;
+  color: white;
+  
+  @include breakpoint(w-med) {
+    font-size: 2rem;
+  }
   
   @include breakpoint(w-sm) {
-    font-size: 2rem;
+    font-size: 1.75rem;
     margin-bottom: 1rem;
   }
 }
+
 
 .description {
   font-family: var(--font-oxygen);
@@ -129,9 +135,9 @@
   .overlay {
     background: linear-gradient(
       135deg,
-      rgba(24, 76, 47, 0.9) 0%, // Slightly more opaque on hover
-      rgba(9, 51, 36, 0.95) 50%,
-      rgba(24, 76, 47, 0.9) 100%
+      rgba(24, 76, 47, 0.625) 0%, // Slightly more opaque on hover
+      rgba(9, 51, 36, 0.725) 50%,
+      rgba(24, 76, 47, 0.625) 100%
     );
   }
   
