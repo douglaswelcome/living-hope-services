@@ -3,11 +3,12 @@ import testimonialsData from '../data/testimonials.json';
 export interface TestimonialData {
   id: number;
   quote: string;
-  emphasizedWord: string;
+  emphasizedWords: string[];
   name: string;
   recoveryTime: string;
   headshotSrc: string;
   headshotAlt: string;
+  fullStory?: string[];
 }
 
 // Get a specific testimonial by ID

@@ -31,22 +31,22 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
           
           <div className={styles.content}>
             <div className={styles.textContent}>
-              <h2 className={styles.heading}>
-                A Place to <span className="hero-highlight">Thrive</span>
+              <h2>
+                A Place to <span className="emphasis">Thrive</span>
               </h2>
-              <p className={styles.description}>
+              <p>
                 At Living Hope Services, we provide a comprehensive approach to addiction recovery 
                 that goes beyond traditional treatment. Our mission is to create a supportive 
                 environment where individuals can rebuild their lives with dignity, purpose, and hope.
               </p>
-              <p className={styles.description}>
+              <p>
                 We offer structured sober living accommodations, personalized mentorship programs, 
                 and community-based support systems that address the physical, emotional, and 
                 spiritual aspects of recovery. Our experienced team works closely with each 
                 resident to develop individualized recovery plans that promote long-term success 
                 and sustainable life changes.
               </p>
-              <p className={styles.description}>
+              <p>
                 Through our network of certified professionals and peer support groups, we create 
                 opportunities for meaningful connections, skill development, and personal growth. 
                 Our goal is not just sobriety, but helping each person discover their potential 

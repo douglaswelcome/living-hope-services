@@ -14,10 +14,8 @@
 }
 
 .subtitle {
-  font-size: 1.125rem;
   max-width: 48rem;
   margin: 0 auto 3rem;
-  line-height: 1.6;
   text-align: center;
   grid-column: 4 / span 6;
   
@@ -27,7 +25,6 @@
   
   @include breakpoint(w-sm) {
     grid-column: 2 / span 10;
-    font-size: 1rem;
     margin-bottom: 2rem;
   }
 }
@@ -160,12 +157,9 @@
 }
 
 .label {
-  font-family: var(--font-montserrat);
-  font-size: 1rem;
   font-weight: 600;
   color: var(--color-bright-green);
   text-align: center;
-  line-height: 1.4;
   margin: 0;
   grid-row: 2; // Labels in second row
   
@@ -183,9 +177,5 @@
   @include breakpoint(w-sm) {
     &:nth-child(3) { grid-column: 1; grid-row: 2; margin-bottom: 1.5rem; } // First label
     &:nth-child(4) { grid-column: 1; grid-row: 4; } // Second label
-  }
-  
-  @include breakpoint(w-sm) {
-    font-size: 0.9rem;
   }
 }

@@ -59,19 +59,6 @@
   }
 }
 
-.subtitle {
-  position: relative;
-  z-index: 1;
-  animation: fadeInUp 1s ease-out 0.2s both;
-  line-height: 1.6;
-  font-size: 1.125rem;
-  font-weight: 300;
-  
-  @include breakpoint(w-sm) {
-    font-size: 1rem;
-  }
-}
-
 .buttonContainer {
   position: relative;
   z-index: 1;

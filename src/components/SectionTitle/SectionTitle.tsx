@@ -16,7 +16,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({ title, className = "" }) =>
       </div>
       
       {/* Title */}
-      <h5 className={styles.title}>
+      <h5>
         {title}
       </h5>
       

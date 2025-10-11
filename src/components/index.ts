@@ -16,4 +16,5 @@ export { default as CCAPPIcon } from './CCAPPIcon/CCAPPIcon';
 export { default as SBLIcon } from './SBLIcon/SBLIcon';
 export { default as Testimonial } from './Testimonial/Testimonial';
 export { default as WhatWeDo } from './WhatWeDo/WhatWeDo';
+export { default as FullScreenModal } from './FullScreenModal/FullScreenModal';
 export { Icon } from './Icon'; 

@@ -52,7 +52,7 @@ const ServicesPreview = () => {
               title={service.title}
               icon={service.icon}
             >
-              <p className={styles.serviceDescription}>
+              <p>
                 {service.description}
               </p>
             </Card>

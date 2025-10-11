@@ -15,7 +15,7 @@ const Navigation = () => {
           <div className={styles.logoContainer}>
             <Logo 
               variant="text" 
-              className={`h-8 w-auto ${isDarkBackground ? styles.logoWhite : styles.logoGreen}`} 
+              className={`h-12 w-auto ${isDarkBackground ? styles.logoWhite : styles.logoGreen}`} 
               color={logoColor} 
             />
           </div>

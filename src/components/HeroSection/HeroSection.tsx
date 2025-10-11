@@ -11,9 +11,9 @@ const HeroSection = () => {
           <div className={styles.textColumn}>
             <h1 className={`${styles.title} display2 mb-6`}>
               Find Your Path to
-              <span className="hero-highlight"> Recovery</span>
+              <span className="emphasis"> Recovery</span>
             </h1>
-            <p className={`${styles.subtitle} mb-8 max-w-3xl`}>
+            <p className={`mb-8 max-w-3xl`}>
               Living Hope Services offers safe and structured sober living environments where men find strength and stability to thrive.
             </p>
             <div className={`${styles.buttonContainer} flex flex-col sm:flex-row gap-4`}>

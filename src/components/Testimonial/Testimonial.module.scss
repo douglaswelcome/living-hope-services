@@ -1,43 +1,178 @@
 @use "../../styles/foundations/response_mixins" as *;
 
-.testimonial {
-  @extend %grid-12;
-  grid-column: 1 / span 12; // Full 12 columns
-  text-align: center;
-  padding: 3rem 2rem;
-  background: var(--color-off-white);
-  border-radius: 1rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+.testimonialWrapper {
+  padding: 4rem 0; // 64px top and bottom spacing from other components
   
   @include breakpoint(w-med) {
-    grid-column: 1 / span 12; // Full width on medium screens
-    padding: 2.5rem 1.5rem;
+    padding: 3rem 0; // 48px on medium screens
   }
   
   @include breakpoint(w-sm) {
-    grid-column: 1 / span 12; // Full width on small screens
-    padding: 2rem 1rem;
+    padding: 6rem 0 2.5rem 0; // Extra top padding (96px) to account for circular avatar extending above card
+  }
+}
+
+.testimonial {
+  @extend %grid-12;
+}
+
+.testimonialCard {
+  grid-column: 1 / span 12; // Full 12 columns
+  background: var(--color-white);
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+  
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    background-color: var(--color-background);
+  }
+
+  @include breakpoint(w-sm) {
+    overflow: visible;
   }
 }
 
 .testimonialContent {
+  grid-column: 1 / -1; // Span all 12 columns within the card
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.headshotContainer {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 3px solid var(--color-bright-green);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  min-height: 300px;
+  position: relative; // Ensure positioning context for absolute children
   
   @include breakpoint(w-sm) {
-    width: 70px;
-    height: 70px;
+    flex-direction: column;
+    min-height: auto;
+    padding-top: 5rem; // Space for the circular avatar
+  }
+}
+
+// Image on right variant
+.imageRight {
+  .testimonialContent {
+    flex-direction: row-reverse;
+    
+    @include breakpoint(w-sm) {
+      flex-direction: column;
+    }
+  }
+}
+
+.imageSection {
+  flex: 0 0 25%;
+  position: relative;
+  
+
+  @include breakpoint(w-med) {
+    flex: 0 0 35%;
+  }
+
+  @include breakpoint(w-sm) {
+    position: absolute;
+    top: -6rem; // Half outside the card
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--color-off-white);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    display: block !important; // Force visibility
+    visibility: visible !important; // Ensure it's visible
+    opacity: 1 !important; // Ensure it's not transparent
+  }
+}
+
+.contentSection {
+  flex: 1;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  @include breakpoint(w-sm) {
+    padding: 3rem;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+.quoteContainer {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+// Shared quote mark styles
+.quoteMark {
+  font-family: var(--font-playfair);
+  font-size: 16rem;
+  font-weight: 300;
+  color: var(--color-orange);
+  opacity: 0.2;
+  line-height: 1;
+  z-index: 1;
+  position: absolute;
+  
+  @include breakpoint(w-med) {
+    font-size: 10rem;
+  }
+
+  @include breakpoint(w-sm) {
+    font-size: 8rem;
+  }
+
+}
+
+// Unique positioning for open quote
+.openQuote {
+  @extend .quoteMark;
+  top: -5rem;
+  left: -4rem;
+  
+  @include breakpoint(w-med) {
+    left: -2.5rem;
+    top: -2.75rem;
+  }
+  
+  @include breakpoint(w-sm) {
+    top: -2rem;
+    left: -1rem;
+  }
+}
+
+// Unique positioning for close quote
+.closeQuote {
+  @extend .quoteMark;
+  bottom: -11.5rem;
+  right: -3rem;
+  
+  @include breakpoint(w-med) {
+    right: -0.5rem;
+    bottom: -6rem;
+  }
+  
+  @include breakpoint(w-sm) {
+    bottom: -3rem;
+    right: -1rem;
+  }
+}
+
+// Quote text styling - h2 with overrides
+.quote {
+  font-weight: 400;
+  color: var(--color-green-gray);
+  margin: 0; // Override h2 default margin
+  text-align: left;
+  max-width: 800px; // Limit width for readability
+  position: relative;
+  z-index: 2;
+  
+  @include breakpoint(w-sm) {
+    text-align: center;
   }
 }
 
@@ -47,59 +182,167 @@
   object-fit: cover;
 }
 
-.quote {
-  font-family: var(--font-oxygen);
-  font-size: 1.25rem;
-  line-height: 1.6;
-  color: var(--color-dark-green);
-  margin: 0;
-  font-style: normal;
-  
-  @include breakpoint(w-sm) {
-    font-size: 1.125rem;
-    line-height: 1.7;
-  }
-}
-
-.emphasizedWord {
-  font-family: var(--font-dancing-script);
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--color-orange);
-  font-style: italic;
-  
-  @include breakpoint(w-sm) {
-    font-size: 1.375rem;
-  }
-}
-
 .attribution {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 0.25rem;
+  margin-bottom: 1.5rem;
+  
+  @include breakpoint(w-sm) {
+    align-items: center;
+    text-align: center;
+  }
+  
+  h5 {
+    margin: 0;
+    text-transform: uppercase;
+  }
+  
+  p {
+    margin: 0;
+    font-style: italic;
+    opacity: 0.7;
+  }
 }
 
-.name {
+.readMoreLink {
+  margin-top: 1rem;
+  align-self: flex-end;
+  
+  // H5-style typography
   font-family: var(--font-montserrat);
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 600;
+  line-height: 1.4;
+  text-transform: uppercase;
   color: var(--color-dark-green);
-  font-style: normal;
+  
+  // Position for underline effect
+  display: inline-block;
+  position: relative;
+  
+  // Underline effect from global typography
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-label);
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                height 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+  }
+  
+  &:hover {
+    &::after {
+      height: 6px;
+      z-index: -1;
+      background-color: var(--color-brand);
+      bottom: 1px;
+    }
+  }
   
   @include breakpoint(w-sm) {
-    font-size: 0.95rem;
+    align-self: center;
+    font-size: 1rem;
   }
 }
 
-.recoveryTime {
-  font-family: var(--font-oxygen);
-  font-size: 0.875rem;
-  color: var(--color-dark-green);
-  opacity: 0.7;
-  font-style: italic;
+// Trigger underline animation when hovering over the card
+.testimonialCard:hover .readMoreLink::after {
+  height: 6px;
+  z-index: -1;
+  background-color: var(--color-brand);
+  bottom: 1px;
+}
+
+// Modal Content Styles
+.modalContent {
+  text-align: left;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid var(--color-off-white);
+  margin-bottom: 2rem;
   
   @include breakpoint(w-sm) {
-    font-size: 0.8rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 }
+
+.modalHeadshotContainer {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+  
+  @include breakpoint(w-sm) {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.modalHeadshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modalHeaderText {
+  flex: 1;
+  
+  h2 {
+    margin: 0 0 0.5rem 0;
+    text-transform: uppercase;
+  }
+  
+  p {
+    margin: 0;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--color-green-gray);
+  }
+}
+
+.modalStory {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  
+  p {
+    margin: 0;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    
+    &:first-of-type::first-letter {
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1;
+      float: left;
+      margin: 0.1rem 0.5rem 0 0;
+      color: var(--color-green);
+      font-family: var(--font-montserrat);
+    }
+    
+    @include breakpoint(w-sm) {
+      &:first-of-type::first-letter {
+        font-size: 2.5rem;
+        margin: 0.05rem 0.35rem 0 0;
+      }
+    }
+  }
+}
+
