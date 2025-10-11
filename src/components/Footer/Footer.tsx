@@ -9,21 +9,37 @@ const Footer = () => {
       <div className={styles.footerContainer}>
         <div className={styles.footerContent}>
           <div className={styles.footerSection}>
-            <h3 className={`${styles.footerTitle} mb-4`}>
+            <h3 className="mb-4">
               <Logo variant="text2" className="h-16 w-auto inline-block" color="var(--color-dark-green)" />
             </h3>
             <div className="divLine"></div>
-            <p className={styles.footerDescription}>
+            <p>
               Providing compassionate addiction recovery services in a supportive environment.
             </p>
           </div>
           
           <div className={`${styles.footerSection} ${styles.contactSection}`}>
-            <h5 className={`${styles.footerSubtitle} mb-4`}>Contact</h5>
+            <h5 className="mb-4">Contact</h5>
             <ul className={`${styles.footerList} space-y-2`}>
               <li>1657 Bessie Ave, Tracy, CA 95376</li>
-              <li>(209) 831-2990</li>
-              <li>info@livinghopeservices.org</li>
+              <li>
+                <a 
+                  href="tel:+12098312990" 
+                  className={styles.contactLink}
+                  aria-label="Call Living Hope Services at (209) 831-2990"
+                >
+                  (209) 831-2990
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="mailto:info@livinghopeservices.org" 
+                  className={styles.contactLink}
+                  aria-label="Send email to info@livinghopeservices.org"
+                >
+                  info@livinghopeservices.org
+                </a>
+              </li>
             </ul>
           </div>
         </div>

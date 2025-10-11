@@ -1,29 +1,46 @@
 [
   {
     "id": 1,
-    "quote": "I found the strength I never knew I had within the supportive community at Living Hope Services.",
-    "emphasizedWord": "strength",
-    "name": "Michael T.",
+    "quote": "My experience at Living Hope Services was truly transformative.",
+    "emphasizedWords": ["transformative"],
+    "name": "Jon H.",
     "recoveryTime": "2 years in recovery",
-    "headshotSrc": "/images/founder.jpg",
-    "headshotAlt": "Michael T. - Testimonial"
+    "headshotSrc": "/images/jonh.jpeg",
+    "headshotAlt": "Jon H. - Testimonial",
+    "fullStory": [
+      "My experience at Living Hope Services was truly transformative. Prior to arriving, I had been through other conventional sober living homes, but none offered the level of genuine support and guidance that Louis and Brett provided. They were deeply invested in my success, willing to step into my life and help in multiple areas whenever I was open to it.",
+      "The balanced approach of integrating 12-step meetings with church activities gave me the opportunity to fully engage in recovery while also deepening my relationship with God. For the first time in my life, I was able to embrace the process wholeheartedly. I am not certain this would have been possible without the unique environment and dedication offered at Living Hope Services.",
+      "I highly recommend Living Hope Services to anyone seeking not only recovery, but also a path toward lasting change and spiritual growth."
+    ]
   },
   {
     "id": 2,
-    "quote": "The accountability and brotherhood I found here gave me the hope I needed to rebuild my life.",
-    "emphasizedWord": "hope",
-    "name": "David R.",
-    "recoveryTime": "18 months in recovery",
-    "headshotSrc": "/images/founder.jpg",
-    "headshotAlt": "David R. - Testimonial"
+    "quote": "From day one, the house felt safe, clean, and structured.",
+    "emphasizedWords": ["safe", "clean", "structured"],
+    "name": "Julie S.",
+    "recoveryTime": "Parent of Resident",
+    "headshotSrc": "/images/julies.jpeg",
+    "headshotAlt": "Julie S. - Testimonial",
+    "fullStory": [
+      "As a parent, entrusting my son’s recovery to a sober living home was a huge step—and I’m grateful we chose this one. From day one, the house felt safe, clean, and structured. The staff set clear expectations (curfew, chores, meetings) and backed them with real accountability—regular drug testing, check-ins, and fair consequences—while still treating residents with respect.",
+      "Communication was excellent. With my son’s consent, we received thoughtful updates and guidance that helped us support him without hovering. The house manager is calm, consistent, and genuinely cares—he helped my son find a sponsor, refine his relapse-prevention plan, and stick to a healthy routine. They also encouraged life skills—budgeting, cooking, job search,—which restored confidence and independence.",
+      "What impressed me most was the community—and the shared faith life. Residents attended weekly Bible study and church services together, which gave my son a steady rhythm of encouragement and accountability. The support went beyond the house, too: Brett and Louis showed up to weekly games to cheer on my son’s daughter, and when we lost my father, they both were right there to offer the compassion and support our family needed.",
+      "We’ve seen steady growth: better communication, reliable employment, stronger boundaries, and a renewed sense of purpose. Recovery is hard, but this home made it doable—and hopeful. If your family is looking for a safe, structured, and faith-forward place for the next step, I highly recommend this sober-living home."
+    ]
   },
   {
     "id": 3,
     "quote": "Living Hope Services didn't just provide housing - they gave me a family and a future I could believe in.",
-    "emphasizedWord": "family",
+    "emphasizedWords": ["family"],
     "name": "James M.",
     "recoveryTime": "3 years in recovery",
     "headshotSrc": "/images/founder.jpg",
-    "headshotAlt": "James M. - Testimonial"
+    "headshotAlt": "James M. - Testimonial",
+    "fullStory": [
+      "I had burned every bridge in my life because of my addiction. My biological family had given up on me, and I had no friends left who would take my calls. When I arrived at Living Hope Services three years ago, I was completely alone and convinced that I would die that way.",
+      "But something remarkable happened at Living Hope - I found a new family. Not a family by blood, but a family by choice and shared experience. The guys in the house became my brothers, and Brett and Louis became father figures I never had. They saw potential in me when I saw nothing but failure.",
+      "The program at Living Hope went beyond traditional recovery. Yes, we worked on staying sober, but we also learned life skills, emotional intelligence, and how to build healthy relationships. We ate meals together, celebrated holidays together, and supported each other through the darkest moments. This wasn't just a sober living house - it was a home.",
+      "Three years later, I'm living independently, working a job I love, and rebuilding relationships with my biological family. But the family I found at Living Hope remains close to my heart. These are the people who saved my life, who showed me what unconditional support looks like, and who gave me a future I could believe in. I will be forever grateful for what they did for me."
+    ]
   }
 ]

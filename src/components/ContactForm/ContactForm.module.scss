@@ -134,34 +134,21 @@
 .contactInfoBox {
   text-align: center;
   margin-bottom: 1rem;
-}
-
-.contactInfoTitle {
-  font-family: var(--font-montserrat);
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: var(--color-dark-green);
-}
-
-.contactInfoSubtitle {
-  font-family: var(--font-mulish);
-  font-size: 1rem;
-  line-height: 1.5;
-  opacity: 0.8;
+  
+  h3 {
+    margin-bottom: 0.5rem;
+    color: var(--color-dark-green);
+  }
 }
 
 .formInfoBox {
   text-align: center;
   margin-bottom: 1rem;
-}
-
-.formInfoTitle {
-  font-family: var(--font-montserrat);
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: var(--color-dark-green);
+  
+  h3 {
+    margin-bottom: 0.5rem;
+    color: var(--color-dark-green);
+  }
 }
 
 .contactItem {
@@ -209,20 +196,17 @@
     align-items: center;
     width: 100%;
   }
-}
-
-.contactLabel {
-  font-family: var(--font-montserrat);
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
-  color: var(--color-dark-green);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
   
-  @include breakpoint(w-sm) {
-    justify-content: center;
+  h4 {
+    margin-bottom: 0.25rem;
+    color: var(--color-dark-green);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+    @include breakpoint(w-sm) {
+      justify-content: center;
+    }
   }
 }
 
@@ -236,8 +220,6 @@
 }
 
 .contactValue {
-  font-family: var(--font-mulish);
-  font-size: 1.125rem;
   font-weight: 500;
   margin-bottom: 0.25rem;
   color: var(--color-bright-green);
@@ -256,59 +238,137 @@
   }
 }
 
-.contactNote {
-  font-family: var(--font-mulish);
-  font-size: 0.875rem;
-  opacity: 0.7;
-  margin: 0;
-}
-
 // Testimonial Card
 .testimonialCard {
   background: white;
-  padding: 1.5rem;
   border-radius: 0.75rem;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-  position: relative;
   margin-top: 1rem;
   width: 100%;
   box-sizing: border-box;
-}
-
-.quoteIcon {
-  font-size: 3rem;
-  color: var(--color-light-teal);
-  position: absolute;
-  top: -0.5rem;
-  left: 1rem;
-  font-family: serif;
-}
-
-.testimonialText {
-  font-family: var(--font-mulish);
-  font-style: italic;
-  font-size: 1rem;
-  line-height: 1.6;
-  margin: 1rem 0 1rem 0;
-  padding-left: 2rem;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-.testimonialAuthor {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  padding-left: 2rem;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   
-  strong {
-    font-family: var(--font-montserrat);
-    font-weight: 600;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
   }
 }
 
-.recoveryTime {
-  font-family: var(--font-mulish);
-  font-size: 0.875rem;
-  opacity: 0.7;
+.testimonialCardContent {
+  display: flex;
+  min-height: 250px;
+  
+  @include breakpoint(w-sm) {
+    flex-direction: column;
+    min-height: auto;
+  }
+}
+
+.testimonialImageSection {
+  flex: 0 0 25%;
+  position: relative;
+  
+  @include breakpoint(w-sm) {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+.testimonialHeadshot {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.testimonialContentSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  justify-content: center;
+  
+  @include breakpoint(w-sm) {
+    align-items: center;
+    text-align: center;
+    padding: 1.25rem;
+  }
+}
+
+.testimonialAttribution {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  
+  @include breakpoint(w-sm) {
+    align-items: center;
+  }
+  
+  h5 {
+    margin: 0;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+  }
+  
+  p {
+    margin: 0;
+    font-size: 0.8rem;
+    opacity: 0.7;
+    font-style: italic;
+  }
+}
+
+.testimonialQuoteContainer {
+  position: relative;
+  width: 100%;
+}
+
+.testimonialOpenQuote,
+.testimonialCloseQuote {
+  font-family: var(--font-playfair);
+  font-size: 6rem;
+  font-weight: 300;
+  color: var(--color-orange);
+  opacity: 0.3;
+  line-height: 1;
+  position: absolute;
+  
+  @include breakpoint(w-sm) {
+    font-size: 3rem;
+  }
+}
+
+.testimonialOpenQuote {
+  top: -1.5rem;
+  left: -1rem;
+  
+  @include breakpoint(w-sm) {
+    top: -1rem;
+    left: -0.5rem;
+  }
+}
+
+.testimonialCloseQuote {
+  bottom: -2.5rem;
+  right: -0.5rem;
+  
+  @include breakpoint(w-sm) {
+    bottom: -2rem;
+    right: 0;
+  }
+}
+
+.testimonialQuote {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-green-gray);
+  position: relative;
+  z-index: 2;
+  
+  @include breakpoint(w-sm) {
+    font-size: 0.9rem;
+  }
 }

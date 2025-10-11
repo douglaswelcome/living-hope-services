@@ -43,18 +43,19 @@
   grid-column: span 12;
   position: relative;
   z-index: 1;
-}
-
-.title {
-  position: relative;
-  z-index: 1;
-  animation: slideInDown 1s ease-out;
-  font-size: 1.875rem;
-  font-weight: 700;
-  color: white;
   
-  @include breakpoint(w-sm) {
-    font-size: 1.5rem;
+  h2 {
+    color: white;
+    position: relative;
+    z-index: 1;
+    animation: slideInDown 1s ease-out;
+  }
+  
+  p {
+    color: white;
+    position: relative;
+    z-index: 1;
+    animation: slideInDown 1s ease-out 0.2s both;
   }
   
   @keyframes slideInDown {
@@ -66,20 +67,6 @@
       opacity: 1;
       transform: translateY(0);
     }
-  }
-}
-
-.subtitle {
-  position: relative;
-  z-index: 1;
-  animation: slideInDown 1s ease-out 0.2s both;
-  line-height: 1.6;
-  font-size: 1.125rem;
-  font-weight: 300;
-  color: white;
-  
-  @include breakpoint(w-sm) {
-    font-size: 1rem;
   }
 }
 

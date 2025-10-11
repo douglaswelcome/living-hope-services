@@ -20,7 +20,7 @@ const FounderStory: React.FC<FounderStoryProps> = ({
   imageAlt, 
   className = "" 
 }) => {
-  // Function to highlight specific words with the hero-highlight class
+  // Function to highlight specific words with the emphasis class
   const highlightWords = (text: string) => {
     const words = text.split(/(\s+)/);
     return words.map((word, index) => {
@@ -36,7 +36,7 @@ const FounderStory: React.FC<FounderStoryProps> = ({
           return (
             <React.Fragment key={index}>
               {beforeHope}
-              <span className="hero-highlight">{hopeWord}</span>
+              <span className="emphasis">{hopeWord}</span>
               {afterHope}
             </React.Fragment>
           );
@@ -49,7 +49,7 @@ const FounderStory: React.FC<FounderStoryProps> = ({
           return (
             <React.Fragment key={index}>
               {beforeRecovery}
-              <span className="hero-highlight">{recoveryWord}</span>
+              <span className="emphasis">{recoveryWord}</span>
               {afterRecovery}
             </React.Fragment>
           );
@@ -71,16 +71,16 @@ const FounderStory: React.FC<FounderStoryProps> = ({
           
           <div className={styles.textContent}>
             {subtitle && (
-              <h2 className={styles.storyTitle}>{highlightWords(subtitle)}</h2>
+              <h2>{highlightWords(subtitle)}</h2>
             )}
             {Array.isArray(story) 
               ? story.map((paragraph, index) => (
-                  <p key={index} className={styles.storyText}>
+                  <p key={index}>
                     {paragraph}
                   </p>
                 ))
               : story.split('\n\n').map((paragraph, index) => (
-                  <p key={index} className={styles.storyText}>
+                  <p key={index}>
                     {paragraph.trim()}
                   </p>
                 ))

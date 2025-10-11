@@ -41,8 +41,8 @@ const AddressSection = () => {
       <div className={styles.addressContainer}>
         <SectionTitle title="Our Locations" />
         <p className={styles.subtitle}>
-        Each of our homes is thoughtfully maintained to be clean, safe, and supportive, creating an environment where men can focus on healing, stability, and hope.
-                  </p>
+          Each of our homes is thoughtfully maintained to be clean, safe, and supportive, creating an environment where men can focus on healing, stability, and hope.
+        </p>
         <div className={styles.cardsGrid}>
           {addressCards.map((card) => (
             <Card
@@ -52,9 +52,9 @@ const AddressSection = () => {
               imageSrc={card.imageSrc}
               imageAlt={card.imageAlt}
             >
-              <address className={styles.address}>
+              <p className={styles.address}>
                 {card.address}
-              </address>
+              </p>
             </Card>
           ))}
         </div>

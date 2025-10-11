@@ -99,7 +99,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
             <div className={styles.formColumn}>
               {/* Form Header */}
               <div className={styles.formInfoBox}>
-                <h3 className={styles.formInfoTitle}>Get More Info</h3>
+                <h3>Get More Info</h3>
               </div>
               
               <form onSubmit={handleSubmit} className={styles.contactForm}>
@@ -181,7 +181,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
             <div className={styles.infoColumn}>
               {/* Contact Information */}
               <div className={styles.contactInfoBox}>
-                <h3 className={styles.contactInfoTitle}>Contact Us</h3>
+                <h3>Contact Us</h3>
               </div>
 
               {/* Phone Number */}
@@ -190,14 +190,13 @@ const ContactForm: React.FC<ContactFormProps> = ({
                   <FontAwesomeIcon icon="phone" style={{ color: 'var(--color-bright-green)' }} />
                 </div>
                 <div className={styles.contactDetails}>
-                  <h4 className={styles.contactLabel}>
+                  <h4>
                     <FontAwesomeIcon icon="phone" className={styles.contactLabelIcon} style={{ color: 'var(--color-bright-green)' }} />
                     Phone
                   </h4>
                   <a href="tel:+12098312990" className={styles.contactValue}>
                     (209) 831-2990
                   </a>
-                  <p className={styles.contactNote}></p>
                 </div>
               </div>
 
@@ -207,26 +206,35 @@ const ContactForm: React.FC<ContactFormProps> = ({
                   <FontAwesomeIcon icon="envelope" style={{ color: 'var(--color-bright-green)' }} />
                 </div>
                 <div className={styles.contactDetails}>
-                  <h4 className={styles.contactLabel}>
+                  <h4>
                     <FontAwesomeIcon icon="envelope" className={styles.contactLabelIcon} style={{ color: 'var(--color-bright-green)' }} />
                     Email
                   </h4>
                   <a href="mailto:info@livinghopeservices.org" className={styles.contactValue}>
                     info@livinghopeservices.org
                   </a>
-                  <p className={styles.contactNote}></p>
                 </div>
               </div>
 
               {/* Testimonial Card */}
               <div className={styles.testimonialCard}>
-                <div className={styles.quoteIcon}>&ldquo;</div>
-                <blockquote className={styles.testimonialText}>
-                  I was nervous about reaching out, but the staff responded quickly and compassionately. They made the entire process feel comfortable and respectful from the first contact.
-                </blockquote>
-                <div className={styles.testimonialAuthor}>
-                  <strong>Michael T.</strong>
-                  <span className={styles.recoveryTime}>9 months in recovery</span>
+                <div className={styles.testimonialCardContent}>
+                  <div className={styles.testimonialImageSection}>
+                    <div className={styles.testimonialHeadshot} style={{ backgroundImage: 'url(/images/joem.jpeg)' }} />
+                  </div>
+                  <div className={styles.testimonialContentSection}>
+                    <div className={styles.testimonialAttribution}>
+                      <h5>Joe M.</h5>
+                      <p>2 years sober</p>
+                    </div>
+                    <div className={styles.testimonialQuoteContainer}>
+                      <span className={styles.testimonialOpenQuote}>&ldquo;</span>
+                      <blockquote className={styles.testimonialQuote}>
+                        Moving into Sober Living Home was the best decision I made for my sobriety. The support, structure, and faith-based guidance have helped me grow stronger every day. I feel safe, loved, and closer to God.
+                      </blockquote>
+                      <span className={styles.testimonialCloseQuote}>&rdquo;</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

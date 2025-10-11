@@ -37,7 +37,7 @@ const FAQ = () => {
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${item.id}`}
                 >
-                  <span className={styles.questionText}>{item.question}</span>
+                  <p className={styles.questionText}>{item.question}</p>
                   <span className={styles.iconContainer}>
                     {isOpen ? (
                       <svg className={styles.minusIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -55,9 +55,9 @@ const FAQ = () => {
                   className={`${styles.faqAnswer} ${isOpen ? styles.open : ''}`}
                   aria-hidden={!isOpen}
                 >
-                  <div className={styles.answerContent}>
+                  <p className={styles.answerContent}>
                     {item.answer}
-                  </div>
+                  </p>
                 </div>
               </div>
             );

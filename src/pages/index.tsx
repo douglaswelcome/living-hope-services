@@ -12,7 +12,7 @@ import {
   FounderStory,
   // CCAPPIcon, // Temporarily commented out - using Font Awesome handshake icon
   // SBLIcon, // Temporarily commented out - using Font Awesome house icon
-  // Testimonial,
+  Testimonial,
   WhatWeDo
 } from "../components";
 
@@ -75,6 +75,9 @@ export default function Home() {
         <Navigation />
         <HeroSection />
          <WhatWeDo /> 
+        
+        {/* <Testimonial id={3} imagePosition="right" /> */}
+        
         <AddressSection /> 
 
         <FounderStory 
@@ -89,8 +92,7 @@ export default function Home() {
           imageAlt="Founder of Living Hope Services"
         />
         
-        {/* Testimonial Example */}
-        {/* <Testimonial id={1} /> */}
+        <Testimonial id={1} />
         
         <Accreditations 
           title="Our Accreditations"
@@ -98,10 +100,14 @@ export default function Home() {
           accreditations={accreditations} 
         />
         <FAQ />
+        
+        <Testimonial id={2} imagePosition="right" />
+        
         <ContactForm 
           title="Contact Our Team"
           subtitle="Ready to start your recovery journey? We're here to help."
         />
+        
         <Footer />
       </div>
 
