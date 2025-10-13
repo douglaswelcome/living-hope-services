@@ -9,6 +9,7 @@ interface FounderStoryProps {
   story: string | string[];
   imageSrc: string;
   imageAlt: string;
+  mobileImageSrc?: string;
   className?: string;
 }
 
@@ -17,7 +18,8 @@ const FounderStory: React.FC<FounderStoryProps> = ({
   subtitle, 
   story, 
   imageSrc, 
-  imageAlt, 
+  imageAlt,
+  mobileImageSrc, 
   className = "" 
 }) => {
   // Function to highlight specific words with the emphasis class
@@ -88,7 +90,7 @@ const FounderStory: React.FC<FounderStoryProps> = ({
           </div>
           
           <div className={styles.imageContainer}>
-            <div className={styles.imageWrapper}>
+            <div className={`${styles.imageWrapper} ${styles.desktopImage}`}>
               <Image 
                 src={imageSrc} 
                 alt={imageAlt}
@@ -97,6 +99,17 @@ const FounderStory: React.FC<FounderStoryProps> = ({
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
+            {mobileImageSrc && (
+              <div className={`${styles.imageWrapper} ${styles.mobileImage}`}>
+                <Image 
+                  src={mobileImageSrc} 
+                  alt={imageAlt}
+                  className={styles.founderImage}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+            )}
           </div>
         </div>
       </div>
