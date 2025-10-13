@@ -89,6 +89,7 @@ export default function Home() {
             "Brett listened, inspired by Louis's vision and courage, and recognized the opportunity to join him in building something lasting. Together, they founded Living Hope Services, a place where men can find not only safe housing, but also a supportive network and a pathway toward lasting recovery and stability."
           ]}
           imageSrc="/images/founder.jpg"
+          mobileImageSrc="/images/Brett&LouisVert.jpg"
           imageAlt="Founder of Living Hope Services"
         />
         
