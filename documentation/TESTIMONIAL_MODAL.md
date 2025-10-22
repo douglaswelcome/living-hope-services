@@ -137,3 +137,6 @@ The FullScreenModal component can be reused for:
 - Component is fully typed with TypeScript for type safety
 
 
+
+
+

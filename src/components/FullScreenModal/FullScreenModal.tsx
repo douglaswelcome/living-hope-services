@@ -67,3 +67,6 @@ const FullScreenModal: React.FC<FullScreenModalProps> = ({
 export default FullScreenModal;
 
 
+
+
+
